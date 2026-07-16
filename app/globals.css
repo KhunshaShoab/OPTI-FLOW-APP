@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sora: "Sora", sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: auto; } /* Lenis handles smoothness */
+
+body {
+  margin: 0;
+  background: #090b1a;
+  color: #fff;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* hide native cursor when custom cursor is active (desktop only) */
+@media (hover: hover) and (pointer: fine) {
+  body.cursor-none, body.cursor-none * { cursor: none !important; }
+}
+
+@layer components {
+  .shell { @apply mx-auto w-full max-w-shell px-6; }
+  .eyebrow {
+    @apply inline-flex items-center gap-3 font-grotesk text-[12px] font-semibold uppercase tracking-[0.26em] text-cyan;
+  }
+  .eyebrow::before { content: ""; @apply h-px w-6; background: linear-gradient(90deg, #ec1866, #00d4ff); }
+  .h-display { @apply font-display font-bold tracking-tightest; }
+  .grad-text {
+    background: linear-gradient(100deg, #ec1866, #00d4ff 60%, #00c2a8);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .glass {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 22px;
+  }
+  .btn {
+    @apply relative inline-flex items-center gap-2 overflow-hidden rounded-full border px-6 py-3.5 font-grotesk text-[14.5px] font-semibold;
+    border-color: rgba(255,255,255,0.16);
+    transition: transform .3s, box-shadow .3s, background .3s;
+  }
+  .btn-primary {
+    background: linear-gradient(100deg, #ec1866, #b3124f);
+    border-color: transparent; color: #fff;
+    box-shadow: 0 10px 34px -10px rgba(236,24,102,.7);
+  }
+  .btn-primary:hover { box-shadow: 0 16px 46px -8px rgba(0,212,255,.6); }
+  .btn-ghost { background: rgba(255,255,255,0.03); color: #fff; }
+  .btn-ghost:hover { background: rgba(255,255,255,0.09); }
+}
+
+@layer utilities {
+  .glow-cyan { box-shadow: 0 0 40px -8px rgba(0,212,255,.55); }
+  .glow-mag { box-shadow: 0 0 40px -8px rgba(236,24,102,.55); }
+  .text-balance { text-wrap: balance; }
+  .noise-mask { mask: radial-gradient(120% 90% at 50% 30%, #000 30%, transparent 78%); }
+}
+
+/* accessible focus */
+:focus-visible { outline: 2px solid #00d4ff; outline-offset: 3px; border-radius: 6px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+}
