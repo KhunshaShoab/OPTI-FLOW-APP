@@ -2,20 +2,20 @@ import Link from "next/link";
 import { SITE } from "@/lib/data";
 
 const COLS = [
-  { h: "Services", links: [["Live Chat", "/services"], ["Phone Support", "/services"], ["Email Support", "/services"], ["Amazon Support", "/services"]] },
+  { h: "Services", links: [["Live Chat", "/services"], ["Phone Support", "/services"], ["Email Support", "/services"], ["Shopify DTC Support", "/services"], ["VA Receptionist", "/services"], ["AI Automations", "/services"]] },
   { h: "Company", links: [["Why Us", "/why-optiflow"], ["Case Studies", "/case-studies"], ["How It Works", "/how-it-works"], ["About", "/about"]] },
   { h: "More", links: [["Pricing", "/pricing"], ["Careers", "/careers"], ["Blog", "/blog"], ["Contact", "/contact"]] },
 ];
 
 export default function Footer() {
   return (
-    <footer className="relative z-[2] mt-10 border-t border-transparent bg-[rgba(9,11,26,.5)] py-14 backdrop-blur-md">
-      <div className="absolute inset-x-0 top-0 h-px animate-slide" style={{ background: "linear-gradient(90deg,transparent,#EC1866,#00D4FF,#00C2A8,transparent)", backgroundSize: "200% 100%" }} />
+    <footer className="relative z-[2] mt-10 border-t border-transparent bg-[rgba(11,30,63,.5)] py-14 backdrop-blur-md">
+      <div className="absolute inset-x-0 top-0 h-px animate-slide" style={{ background: "linear-gradient(90deg,transparent,#F97316,#3B82F6,#38BDF8,transparent)", backgroundSize: "200% 100%" }} />
       <div className="shell">
         <div className="grid gap-8 md:grid-cols-[1.6fr_1fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center gap-3 font-grotesk font-semibold">
-              <span className="relative h-7 w-7 flex-none animate-spinSlow rounded-[9px]" style={{ background: "conic-gradient(from 200deg,#EC1866,#00D4FF,#00C2A8,#EC1866)" }}>
+              <span className="relative h-7 w-7 flex-none animate-spinSlow rounded-[9px]" style={{ background: "conic-gradient(from 200deg,#F97316,#3B82F6,#38BDF8,#F97316)" }}>
                 <span className="absolute inset-1.5 rounded-[5px] bg-bg2" />
               </span>
               OptiFlow<span className="font-normal text-faint">Solutions</span>
@@ -24,7 +24,7 @@ export default function Footer() {
             <p className="mt-3 text-sm text-faint">📍 {SITE.location} · Serving US · UK · EU · AU · ME</p>
             <div className="mt-4 flex gap-2.5">
               {["in", "✕", "f", "◎"].map((s, i) => (
-                <a key={i} href="/contact" className="grid h-9 w-9 place-items-center rounded-[10px] border border-line transition hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_18px_-4px_#00d4ff]">{s}</a>
+                <a key={i} href="/contact" className="grid h-9 w-9 place-items-center rounded-[10px] border border-line transition hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_18px_-4px_#3b82f6]">{s}</a>
               ))}
             </div>
           </div>

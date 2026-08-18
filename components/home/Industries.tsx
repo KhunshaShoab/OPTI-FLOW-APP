@@ -16,12 +16,12 @@ export default function Industries() {
               <div className="group aspect-square [perspective:900px]" data-cursor="hover">
                 <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   <div className="glass absolute inset-0 flex flex-col items-center justify-center gap-3 [backface-visibility:hidden]">
-                    <div className="grid h-14 w-14 place-items-center rounded-2xl border border-line text-cyan" style={{ background: "linear-gradient(150deg,rgba(236,24,102,.14),rgba(0,212,255,.1))" }}>
+                    <div className="grid h-14 w-14 place-items-center rounded-2xl border border-line text-cyan" style={{ background: "linear-gradient(150deg,rgba(249,115,22,.14),rgba(59,130,246,.1))" }}>
                       <Icon name={ind.icon} className="h-7 w-7" />
                     </div>
                     <div className="font-grotesk text-sm font-semibold">{ind.name}</div>
                   </div>
-                  <div className="glass absolute inset-0 flex items-center justify-center p-4 text-center [backface-visibility:hidden] [transform:rotateY(180deg)]" style={{ background: "linear-gradient(150deg,rgba(236,24,102,.16),rgba(0,212,255,.12))" }}>
+                  <div className="glass absolute inset-0 flex items-center justify-center p-4 text-center [backface-visibility:hidden] [transform:rotateY(180deg)]" style={{ background: "linear-gradient(150deg,rgba(249,115,22,.16),rgba(59,130,246,.12))" }}>
                     <p className="text-[12.5px] text-[#dfe3f0]">{ind.info}</p>
                   </div>
                 </div>

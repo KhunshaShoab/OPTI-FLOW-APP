@@ -39,7 +39,7 @@ export default function WhyDashboard() {
           <p className="mt-5 max-w-lg text-muted">Support isn't a cost centre. Done right, it protects revenue, ratings and retention. Five reasons brands choose us.</p>
           <div className="mt-2">
             {FEATURES.map((f) => (
-              <div key={f.n} className="group flex gap-4 border-t border-line py-5 transition-all last:border-b hover:pl-2.5 hover:[background:linear-gradient(90deg,rgba(0,212,255,.05),transparent)]">
+              <div key={f.n} className="group flex gap-4 border-t border-line py-5 transition-all last:border-b hover:pl-2.5 hover:[background:linear-gradient(90deg,rgba(59,130,246,.05),transparent)]">
                 <div className="pt-0.5 font-grotesk text-sm tabular-nums text-faint transition group-hover:text-cyan">{f.n}</div>
                 <div>
                   <h4 className="font-display text-[17px] font-semibold">{f.title}</h4>
@@ -52,7 +52,7 @@ export default function WhyDashboard() {
 
         <Reveal delay={0.12}>
           <div className="glass relative overflow-hidden p-8">
-            <div className="pointer-events-none absolute -right-10 -top-10 h-56 w-56 rounded-full opacity-50 blur-[50px]" style={{ background: "radial-gradient(circle,#00d4ff,transparent 65%)" }} />
+            <div className="pointer-events-none absolute -right-10 -top-10 h-56 w-56 rounded-full opacity-50 blur-[50px]" style={{ background: "radial-gradient(circle,#3b82f6,transparent 65%)" }} />
             <div className="relative mb-5 flex items-center justify-between">
               <span className="font-grotesk text-[13px] text-muted">Operations Overview</span>
               <span className="flex items-center gap-2 font-grotesk text-[11px] text-teal"><span className="h-[7px] w-[7px] animate-pulseGlow rounded-full bg-teal" />Live</span>
@@ -67,7 +67,7 @@ export default function WhyDashboard() {
             </div>
             <div ref={chart} className="relative mt-5 flex h-24 items-end gap-2 rounded-[14px] border border-line bg-white/[0.03] p-3.5">
               {BARS.map((h, i) => (
-                <div key={i} className="flex-1 rounded-t-[5px] transition-[height] duration-1000 ease-out" style={{ height: inView ? `${h}%` : "0%", transitionDelay: `${i * 70}ms`, background: "linear-gradient(180deg,#00d4ff,#ec1866)" }} />
+                <div key={i} className="flex-1 rounded-t-[5px] transition-[height] duration-1000 ease-out" style={{ height: inView ? `${h}%` : "0%", transitionDelay: `${i * 70}ms`, background: "linear-gradient(180deg,#3b82f6,#f97316)" }} />
               ))}
             </div>
           </div>

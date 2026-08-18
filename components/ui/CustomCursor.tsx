@@ -44,12 +44,12 @@ export default function CustomCursor() {
 
   return (
     <>
-      <div ref={dot} className="pointer-events-none fixed left-0 top-0 z-[9999] h-[7px] w-[7px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan mix-blend-screen shadow-[0_0_12px_#00d4ff]" />
+      <div ref={dot} className="pointer-events-none fixed left-0 top-0 z-[9999] h-[7px] w-[7px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan mix-blend-screen shadow-[0_0_12px_#3b82f6]" />
       <div
         ref={ring}
         className="cursor-ring pointer-events-none fixed left-0 top-0 z-[9999] h-9 w-9 -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan/60 mix-blend-screen transition-[width,height,background,border-color] duration-200"
       />
-      <style>{`.cursor-ring.on{width:64px;height:64px;background:rgba(236,24,102,.12);border-color:rgba(236,24,102,.6)}`}</style>
+      <style>{`.cursor-ring.on{width:64px;height:64px;background:rgba(249,115,22,.12);border-color:rgba(249,115,22,.6)}`}</style>
     </>
   );
 }

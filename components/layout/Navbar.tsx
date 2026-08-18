@@ -21,11 +21,11 @@ export default function Navbar() {
       <nav
         className={cn(
           "mt-4 flex w-[min(1200px,calc(100%-32px))] items-center justify-between rounded-full border border-line px-3 py-2.5 pl-5 backdrop-blur-xl transition-colors duration-300",
-          scrolled ? "bg-[rgba(9,11,26,.82)]" : "bg-[rgba(12,16,36,.5)]"
+          scrolled ? "bg-[rgba(11,30,63,.82)]" : "bg-[rgba(15,33,69,.5)]"
         )}
       >
         <Link href="/" className="flex items-center gap-3 font-grotesk font-semibold">
-          <span className="relative h-7 w-7 flex-none animate-spinSlow rounded-[9px] shadow-[0_0_20px_-4px_#00d4ff]" style={{ background: "conic-gradient(from 200deg,#EC1866,#00D4FF,#00C2A8,#EC1866)" }}>
+          <span className="relative h-7 w-7 flex-none animate-spinSlow rounded-[9px] shadow-[0_0_20px_-4px_#3b82f6]" style={{ background: "conic-gradient(from 200deg,#F97316,#3B82F6,#38BDF8,#F97316)" }}>
             <span className="absolute inset-1.5 rounded-[5px] bg-bg2" />
           </span>
           OptiFlow<span className="font-normal text-faint">Solutions</span>
@@ -49,7 +49,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="absolute top-20 w-[min(1200px,calc(100%-32px))] rounded-2xl border border-line bg-[rgba(9,11,26,.95)] p-4 backdrop-blur-xl md:hidden">
+        <div className="absolute top-20 w-[min(1200px,calc(100%-32px))] rounded-2xl border border-line bg-[rgba(11,30,63,.95)] p-4 backdrop-blur-xl md:hidden">
           <div className="flex flex-col gap-1 font-grotesk">
             {NAV.map((n) => (
               <Link key={n.href} href={n.href} onClick={() => setOpen(false)} className="rounded-xl px-4 py-3 text-muted hover:bg-white/5 hover:text-white">

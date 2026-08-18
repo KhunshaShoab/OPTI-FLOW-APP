@@ -40,14 +40,19 @@ export const SERVICES = [
     tags: ["Tier 1", "Tier 2", "Diagnostics"],
   },
   {
-    icon: "Package", env: "amazon", title: "Amazon Support",
-    desc: "Protect your seller reputation with specialists who understand Amazon's policies, performance metrics, A-to-z claims, returns, and buyer expectations.",
-    tags: ["A-to-z", "Reviews", "ODR"],
+    icon: "ShoppingBag", env: "shopify", title: "Shopify DTC Support",
+    desc: "End-to-end care for direct-to-consumer Shopify brands — WISMO, exchanges, subscriptions, and pre-sale conversion handled by agents fluent in your storefront and stack.",
+    tags: ["Shopify", "Recharge", "Klaviyo"],
   },
   {
-    icon: "LayoutGrid", env: "ops", title: "Back Office",
-    desc: "Order management, data entry and CRM hygiene handled quietly in the background — so your operations stay clean while you focus on growth.",
-    tags: ["Shopify", "HubSpot", "Salesforce"],
+    icon: "PhoneCall", env: "receptionist", title: "VA Receptionist",
+    desc: "A polished, dedicated virtual receptionist answering calls, booking appointments and routing messages — the composed first impression your business deserves.",
+    tags: ["Live answer", "Scheduling", "Routing"],
+  },
+  {
+    icon: "Sparkles", env: "ai", title: "AI Automations",
+    desc: "Custom AI workflows that draft replies, triage tickets and automate repetitive ops — so your team spends time on customers, not on busywork.",
+    tags: ["Workflows", "GPT-powered", "Zapier / Make"],
   },
 ];
 
@@ -60,7 +65,7 @@ export const FEATURES = [
 ];
 
 export const INDUSTRIES = [
-  { icon: "Package", name: "Amazon", info: "Rating & ODR protection, returns, A-to-z, review response." },
+  { icon: "ShoppingBag", name: "Shopify DTC", info: "Order status, exchanges, subscriptions and pre-sale conversion for DTC brands." },
   { icon: "ShoppingCart", name: "eCommerce", info: "Order status, WISMO, exchanges, pre-sale conversion." },
   { icon: "Cloud", name: "SaaS", info: "Onboarding, billing, retention and tier-1 troubleshooting." },
   { icon: "Cpu", name: "Hardware", info: "Setup, firmware, warranty and technical diagnostics." },
@@ -92,7 +97,7 @@ export const SECURITY = [
 export const TESTIMONIALS = [
   { quote: "They didn't just answer tickets — they learned our product and protected our ratings like it was their own business.", who: "Client Brand", role: "Replace with a real quote", av: "CB" },
   { quote: "Response times dropped and our customers noticed. It felt like scaling our own team, overnight.", who: "DTC Brand", role: "Replace with a real quote", av: "DT" },
-  { quote: "Coachable, fast and genuinely invested. The pilot made the decision easy.", who: "Amazon Seller", role: "Replace with a real quote", av: "AS" },
+  { quote: "Coachable, fast and genuinely invested. The pilot made the decision easy.", who: "Shopify DTC Brand", role: "Replace with a real quote", av: "SD" },
 ];
 
 // Rough equirectangular coords (x,y in 0..1) for the contact routes map.
@@ -107,10 +112,10 @@ export const ROUTES = [
 
 // Ticket categories used across the story + ops background (colour-coded flows).
 export const TICKET_TYPES = [
-  { label: "Chat", color: "#00D4FF" },
+  { label: "Chat", color: "#3B82F6" },
   { label: "Email", color: "#6E56F0" },
-  { label: "Phone", color: "#00C2A8" },
-  { label: "Amazon", color: "#EC1866" },
+  { label: "Phone", color: "#38BDF8" },
+  { label: "Shopify DTC", color: "#F97316" },
   { label: "Technical", color: "#F5A524" },
   { label: "Billing", color: "#22C55E" },
   { label: "Returns", color: "#38BDF8" },

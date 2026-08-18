@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
 // customer operations." Replaces the old galaxy/aurora background.
 type Glyph = { x: number; y: number; vx: number; vy: number; r: number; k: number; c: string; ph: number };
 
-const COLORS = ["0,212,255", "0,194,168", "236,24,102", "110,86,240"];
+const COLORS = ["59,130,246", "56,189,248", "249,115,22", "110,86,240"];
 
 export default function Background() {
   const canvas = useRef<HTMLCanvasElement>(null);
@@ -80,7 +80,7 @@ export default function Background() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
       {/* deep operations-console base, not a nebula */}
-      <div className="absolute inset-0" style={{ background: "radial-gradient(120% 80% at 50% -10%, #10162e 0%, #090b1a 55%, #070810 100%)" }} />
+      <div className="absolute inset-0" style={{ background: "radial-gradient(120% 80% at 50% -10%, #10162e 0%, #0b1e3f 55%, #070810 100%)" }} />
       <div className="noise-mask absolute inset-0 opacity-40" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px)", backgroundSize: "72px 72px" }} />
       <canvas ref={canvas} className="absolute inset-0 h-full w-full" />
     </div>

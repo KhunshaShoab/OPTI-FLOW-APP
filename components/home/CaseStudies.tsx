@@ -15,7 +15,7 @@ function StackCard({ c, i, total }: { c: (typeof CASES)[number]; i: number; tota
   return (
     <div ref={ref} className="sticky" style={{ top: `${96 + i * 26}px` }}>
       <motion.div style={{ scale, opacity }} className="glass group relative overflow-hidden p-9 transition-[border-color] hover:border-line2 hover:glow-cyan">
-        <div className="absolute inset-x-0 top-0 h-1 animate-slide" style={{ background: "linear-gradient(90deg,#EC1866,#00D4FF,#00C2A8)", backgroundSize: "200% 100%" }} />
+        <div className="absolute inset-x-0 top-0 h-1 animate-slide" style={{ background: "linear-gradient(90deg,#F97316,#3B82F6,#38BDF8)", backgroundSize: "200% 100%" }} />
         <div className="flex flex-wrap items-start justify-between gap-6">
           <div className="max-w-xl">
             <div className="font-grotesk text-[11px] font-semibold uppercase tracking-[0.16em] text-cyan">{c.tag}</div>
@@ -44,7 +44,7 @@ export default function CaseStudies() {
         <div className="space-y-6">
           {CASES.map((c, i) => <StackCard key={c.client} c={c} i={i} total={CASES.length} />)}
         </div>
-        <p className="mt-12 text-center text-[15px] text-muted">…plus a roster of top-rated Amazon sellers who trust us to resolve their buyers' concerns.</p>
+        <p className="mt-12 text-center text-[15px] text-muted">…plus a roster of top-rated Shopify DTC brands who trust us to resolve their buyers' concerns.</p>
       </div>
     </section>
   );

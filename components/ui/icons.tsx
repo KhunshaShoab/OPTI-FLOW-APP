@@ -3,13 +3,15 @@
 import {
   MessageSquare, Headphones, Mail, Wrench, Package, LayoutGrid,
   ShoppingCart, Cloud, Cpu, Repeat, Search, GraduationCap, Rocket,
-  TrendingUp, ShieldCheck, Lock, type LucideIcon,
+  TrendingUp, ShieldCheck, Lock, ShoppingBag, PhoneCall, Sparkles,
+  Bot, Workflow, Plug, type LucideIcon,
 } from "lucide-react";
 
 const MAP: Record<string, LucideIcon> = {
   MessageSquare, Headphones, Mail, Wrench, Package, LayoutGrid,
   ShoppingCart, Cloud, Cpu, Repeat, Search, GraduationCap, Rocket,
-  TrendingUp, ShieldCheck, Lock,
+  TrendingUp, ShieldCheck, Lock, ShoppingBag, PhoneCall, Sparkles,
+  Bot, Workflow, Plug,
 };
 
 export function Icon({ name, className }: { name: string; className?: string }) {
