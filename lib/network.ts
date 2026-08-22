@@ -2,7 +2,7 @@
 // Service nodes arranged on a ring (centre kept clean for typography), joined by
 // elegant workflow connections that data packets travel along. Colours are
 // restricted to teal / magenta / white per the premium enterprise direction.
-export const NET_COLORS = { teal: "#38BDF8", mag: "#F97316", white: "#FFFFFF" };
+export const NET_COLORS = { teal: "#60A5FA", mag: "#0EA5E9", white: "#FFFFFF" };
 
 const LABELS = ["Chat", "Email", "Phone", "CRM", "Amazon", "Technical", "AI Routing", "Analytics"];
 const CYCLE = [NET_COLORS.teal, NET_COLORS.mag, NET_COLORS.white];

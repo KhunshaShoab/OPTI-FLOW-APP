@@ -45,7 +45,7 @@ export default function Home() {
       <Security />
       <Testimonials />
 
-      <section className="relative z-[2] py-32 text-center">
+      <section className="on-light relative z-[2] py-32 text-center">
         <div className="shell">
           <Reveal>
             <h2 className="h-display text-[clamp(34px,5.6vw,64px)]">Let's <span className="grad-text">optimize</span> your<br />customer experience</h2>
@@ -58,7 +58,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="more-services" className="relative z-[2] py-24">
+      <section id="more-services" className="on-light relative z-[2] py-24">
         <div className="shell">
           <SectionHead
             kicker="Services"

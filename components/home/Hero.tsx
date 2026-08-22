@@ -68,7 +68,7 @@ export default function Hero() {
         .hero-title{ text-shadow: 0 0 34px rgba(59,130,246,.10); animation: heroGlow 7s ease-in-out infinite; }
         @keyframes heroGlow{
           0%,100%{ text-shadow: 0 2px 40px rgba(59,130,246,.12), 0 0 2px rgba(255,255,255,.10); }
-          50%{ text-shadow: 0 2px 54px rgba(249,115,22,.16), 0 0 3px rgba(255,255,255,.14); }
+          50%{ text-shadow: 0 2px 54px rgba(14,165,233,.16), 0 0 3px rgba(255,255,255,.14); }
         }
         @media (prefers-reduced-motion: reduce){ .hero-title{ animation: none; } }
       `}</style>

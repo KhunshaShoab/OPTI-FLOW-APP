@@ -67,7 +67,7 @@ export default function WhyDashboard() {
             </div>
             <div ref={chart} className="relative mt-5 flex h-24 items-end gap-2 rounded-[14px] border border-line bg-white/[0.03] p-3.5">
               {BARS.map((h, i) => (
-                <div key={i} className="flex-1 rounded-t-[5px] transition-[height] duration-1000 ease-out" style={{ height: inView ? `${h}%` : "0%", transitionDelay: `${i * 70}ms`, background: "linear-gradient(180deg,#3b82f6,#f97316)" }} />
+                <div key={i} className="flex-1 rounded-t-[5px] transition-[height] duration-1000 ease-out" style={{ height: inView ? `${h}%` : "0%", transitionDelay: `${i * 70}ms`, background: "linear-gradient(180deg,#3b82f6,#0ea5e9)" }} />
               ))}
             </div>
           </div>

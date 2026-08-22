@@ -45,7 +45,7 @@ export default function Security() {
             <canvas ref={canvas} className="absolute inset-0 h-full w-full opacity-70" />
             <div className="relative grid items-center gap-11 p-8 md:grid-cols-2 md:p-14">
               <div>
-                <div className="mb-5 grid h-15 w-15 place-items-center rounded-2xl border border-line2 text-teal glow-cyan" style={{ background: "linear-gradient(150deg,rgba(56,189,248,.2),rgba(59,130,246,.14))", height: 60, width: 60 }}>
+                <div className="mb-5 grid h-15 w-15 place-items-center rounded-2xl border border-line2 text-teal glow-cyan" style={{ background: "linear-gradient(150deg,rgba(96,165,250,.2),rgba(59,130,246,.14))", height: 60, width: 60 }}>
                   <Lock className="h-6 w-6" strokeWidth={1.6} />
                 </div>
                 <span className="eyebrow">Security &amp; trust</span>

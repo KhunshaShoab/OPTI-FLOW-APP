@@ -15,7 +15,7 @@ function StackCard({ c, i, total }: { c: (typeof CASES)[number]; i: number; tota
   return (
     <div ref={ref} className="sticky" style={{ top: `${96 + i * 26}px` }}>
       <motion.div style={{ scale, opacity }} className="glass group relative overflow-hidden p-9 transition-[border-color] hover:border-line2 hover:glow-cyan">
-        <div className="absolute inset-x-0 top-0 h-1 animate-slide" style={{ background: "linear-gradient(90deg,#F97316,#3B82F6,#38BDF8)", backgroundSize: "200% 100%" }} />
+        <div className="absolute inset-x-0 top-0 h-1 animate-slide" style={{ background: "linear-gradient(90deg,#0EA5E9,#3B82F6,#60A5FA)", backgroundSize: "200% 100%" }} />
         <div className="flex flex-wrap items-start justify-between gap-6">
           <div className="max-w-xl">
             <div className="font-grotesk text-[11px] font-semibold uppercase tracking-[0.16em] text-cyan">{c.tag}</div>

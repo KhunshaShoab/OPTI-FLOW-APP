@@ -9,18 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#0B1E3F",
-        bg2: "#14224D",
-        bg3: "#0F2145",
-        mag: "#F97316",
+        bg: "#0A1633",
+        bg2: "#122756",
+        bg3: "#0D1E45",
+        mag: "#0EA5E9",
         cyan: "#3B82F6",
-        teal: "#38BDF8",
+        teal: "#60A5FA",
         ink: "#FFFFFF",
         muted: "#B7BDD2",
         faint: "#6A7290",
         line: "rgba(255,255,255,0.09)",
         line2: "rgba(255,255,255,0.16)",
         glass: "rgba(255,255,255,0.05)",
+        onLight: "#0F172A",
+        onLightMuted: "#475569",
+        onLightFaint: "#64748B",
+        surface: "#F8FAFC",
+        surfaceLine: "#E2E8F0",
       },
       fontFamily: {
         display: ["var(--font-sora)", "var(--font-space)", "system-ui", "sans-serif"],
