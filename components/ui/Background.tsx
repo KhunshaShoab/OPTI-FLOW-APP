@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
 // customer operations." Replaces the old galaxy/aurora background.
 type Glyph = { x: number; y: number; vx: number; vy: number; r: number; k: number; c: string; ph: number };
 
-const COLORS = ["59,130,246", "56,189,248", "249,115,22", "110,86,240"];
+const COLORS = ["59,130,246", "96,165,250", "14,165,233", "110,86,240"];
 
 export default function Background() {
   const canvas = useRef<HTMLCanvasElement>(null);

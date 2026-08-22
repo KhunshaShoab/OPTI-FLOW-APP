@@ -25,7 +25,7 @@ export default function Navbar() {
         )}
       >
         <Link href="/" className="flex items-center gap-3 font-grotesk font-semibold">
-          <span className="relative h-7 w-7 flex-none animate-spinSlow rounded-[9px] shadow-[0_0_20px_-4px_#3b82f6]" style={{ background: "conic-gradient(from 200deg,#F97316,#3B82F6,#38BDF8,#F97316)" }}>
+          <span className="relative h-7 w-7 flex-none animate-spinSlow rounded-[9px] shadow-[0_0_20px_-4px_#3b82f6]" style={{ background: "conic-gradient(from 200deg,#0EA5E9,#3B82F6,#60A5FA,#0EA5E9)" }}>
             <span className="absolute inset-1.5 rounded-[5px] bg-bg2" />
           </span>
           OptiFlow<span className="font-normal text-faint">Solutions</span>

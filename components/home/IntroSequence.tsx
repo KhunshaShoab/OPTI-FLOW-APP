@@ -27,11 +27,11 @@ function glow() {
 function analyticsTex() {
   const c = document.createElement("canvas"); c.width = 256; c.height = 150; const g = c.getContext("2d")!;
   g.fillStyle = "rgba(6,10,22,0.7)"; rr(g, 0, 0, 256, 150, 14); g.fill();
-  g.strokeStyle = "rgba(56,189,248,0.5)"; g.lineWidth = 2; rr(g, 1, 1, 254, 148, 14); g.stroke();
-  g.fillStyle = "rgba(56,189,248,0.9)"; g.beginPath(); g.arc(18, 20, 4, 0, 6.28); g.fill();
+  g.strokeStyle = "rgba(96,165,250,0.5)"; g.lineWidth = 2; rr(g, 1, 1, 254, 148, 14); g.stroke();
+  g.fillStyle = "rgba(96,165,250,0.9)"; g.beginPath(); g.arc(18, 20, 4, 0, 6.28); g.fill();
   g.fillStyle = "rgba(255,255,255,0.8)"; g.font = "600 14px sans-serif"; g.fillText("Analytics", 32, 25);
   g.strokeStyle = "rgba(255,255,255,.1)"; g.beginPath(); g.moveTo(0, 38); g.lineTo(256, 38); g.stroke();
-  const v = [40, 66, 52, 84, 70, 96, 78]; v.forEach((h, i) => { g.fillStyle = i % 2 ? "#38BDF8" : "#F97316"; g.fillRect(22 + i * 32, 140 - h, 18, h); });
+  const v = [40, 66, 52, 84, 70, 96, 78]; v.forEach((h, i) => { g.fillStyle = i % 2 ? "#60A5FA" : "#0EA5E9"; g.fillRect(22 + i * 32, 140 - h, 18, h); });
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
 }
 function rr(g: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
@@ -183,7 +183,7 @@ export default function IntroSequence() {
         </div>
         <div ref={(el) => (caps.current[1] = el)} className="absolute w-full max-w-4xl opacity-0">
           <div className="grid gap-3 sm:grid-cols-3">
-            {[["Amazon Seller", "Where is my order? I need an update.", "#F97316"], ["Technical Support", "My 3D printer stopped working after the latest firmware update.", "#38BDF8"], ["SaaS Billing", "I've been charged twice. Can you help?", "#FFFFFF"]].map(([t, m, col]) => (
+            {[["Amazon Seller", "Where is my order? I need an update.", "#0EA5E9"], ["Technical Support", "My 3D printer stopped working after the latest firmware update.", "#60A5FA"], ["SaaS Billing", "I've been charged twice. Can you help?", "#FFFFFF"]].map(([t, m, col]) => (
               <div key={t as string} className="glass p-5 text-left"><div className="font-grotesk text-[11px] uppercase tracking-wide" style={{ color: col as string }}>{t as string}</div><p className="mt-2 text-[13.5px] text-white">{m as string}</p></div>
             ))}
           </div>
@@ -202,7 +202,7 @@ export default function IntroSequence() {
         <div ref={(el) => (caps.current[4] = el)} className="absolute max-w-xl opacity-0"><p className="font-grotesk text-[clamp(15px,2vw,22px)] text-muted">Thousands of conversations. <span className="text-white">One organized system.</span></p></div>
         <div ref={(el) => (caps.current[5] = el)} className="absolute opacity-0">
           <div className="flex flex-col items-center">
-            <span className="relative mb-6 h-20 w-20 animate-spinSlow rounded-[22px]" style={{ background: "conic-gradient(from 200deg,#F97316,#38BDF8,#FFFFFF,#F97316)" }}><span className="absolute inset-3 rounded-[16px] bg-[#050816]" /></span>
+            <span className="relative mb-6 h-20 w-20 animate-spinSlow rounded-[22px]" style={{ background: "conic-gradient(from 200deg,#0EA5E9,#60A5FA,#FFFFFF,#0EA5E9)" }}><span className="absolute inset-3 rounded-[16px] bg-[#050816]" /></span>
             <h1 className="h-display text-[clamp(44px,8vw,104px)] font-extrabold leading-[0.95]">OptiFlow <span className="grad-text">Solutions</span></h1>
             <p className="mt-3 font-grotesk text-[clamp(14px,1.6vw,20px)] text-muted">Operations, Optimized.</p>
           </div>

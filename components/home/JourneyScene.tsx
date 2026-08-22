@@ -24,7 +24,7 @@ function useGlowTexture() {
   }, []);
 }
 
-const MAG = "#F97316", CY = "#3B82F6", TE = "#38BDF8", VI = "#6E56F0";
+const MAG = "#0EA5E9", CY = "#3B82F6", TE = "#60A5FA", VI = "#6E56F0";
 
 // Journey nodes — position, colour, size, and the story-progress at which they light up.
 const NODES = [

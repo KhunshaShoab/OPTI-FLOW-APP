@@ -10,12 +10,12 @@ const COLS = [
 export default function Footer() {
   return (
     <footer className="relative z-[2] mt-10 border-t border-transparent bg-[rgba(11,30,63,.5)] py-14 backdrop-blur-md">
-      <div className="absolute inset-x-0 top-0 h-px animate-slide" style={{ background: "linear-gradient(90deg,transparent,#F97316,#3B82F6,#38BDF8,transparent)", backgroundSize: "200% 100%" }} />
+      <div className="absolute inset-x-0 top-0 h-px animate-slide" style={{ background: "linear-gradient(90deg,transparent,#0EA5E9,#3B82F6,#60A5FA,transparent)", backgroundSize: "200% 100%" }} />
       <div className="shell">
         <div className="grid gap-8 md:grid-cols-[1.6fr_1fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center gap-3 font-grotesk font-semibold">
-              <span className="relative h-7 w-7 flex-none animate-spinSlow rounded-[9px]" style={{ background: "conic-gradient(from 200deg,#F97316,#3B82F6,#38BDF8,#F97316)" }}>
+              <span className="relative h-7 w-7 flex-none animate-spinSlow rounded-[9px]" style={{ background: "conic-gradient(from 200deg,#0EA5E9,#3B82F6,#60A5FA,#0EA5E9)" }}>
                 <span className="absolute inset-1.5 rounded-[5px] bg-bg2" />
               </span>
               OptiFlow<span className="font-normal text-faint">Solutions</span>

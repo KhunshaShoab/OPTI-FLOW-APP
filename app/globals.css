@@ -15,7 +15,7 @@ html { scroll-behavior: auto; } /* Lenis handles smoothness */
 
 body {
   margin: 0;
-  background: #0b1e3f;
+  background: #0a1633;
   color: #fff;
   font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
@@ -38,10 +38,10 @@ html.lenis, html.lenis body { height: auto; }
   .eyebrow {
     @apply inline-flex items-center gap-3 font-grotesk text-[12px] font-semibold uppercase tracking-[0.26em] text-cyan;
   }
-  .eyebrow::before { content: ""; @apply h-px w-6; background: linear-gradient(90deg, #3b82f6, #38bdf8); }
+  .eyebrow::before { content: ""; @apply h-px w-6; background: linear-gradient(90deg, #3b82f6, #60a5fa); }
   .h-display { @apply font-display font-bold tracking-tightest; }
   .grad-text {
-    background: linear-gradient(100deg, #38bdf8, #3b82f6 55%, #f97316);
+    background: linear-gradient(100deg, #60a5fa, #3b82f6 55%, #0ea5e9);
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
   .glass {
@@ -61,17 +61,55 @@ html.lenis, html.lenis body { height: auto; }
     border-color: transparent; color: #fff;
     box-shadow: 0 10px 34px -10px rgba(59,130,246,.7);
   }
-  .btn-primary:hover { box-shadow: 0 16px 46px -8px rgba(249,115,22,.55); }
+  .btn-primary:hover { box-shadow: 0 16px 46px -8px rgba(14,165,233,.75); }
   .btn-ghost { background: rgba(255,255,255,0.03); color: #fff; }
   .btn-ghost:hover { background: rgba(255,255,255,0.09); }
 }
 
 @layer utilities {
   .glow-cyan { box-shadow: 0 0 40px -8px rgba(59,130,246,.55); }
-  .glow-mag { box-shadow: 0 0 40px -8px rgba(249,115,22,.55); }
+  .glow-mag { box-shadow: 0 0 40px -8px rgba(14,165,233,.55); }
   .text-balance { text-wrap: balance; }
   .noise-mask { mask: radial-gradient(120% 90% at 50% 30%, #000 30%, transparent 78%); }
 }
+
+/* ----------  LIGHT SECTION (white bg with dark text) ---------- */
+.on-light {
+  background: #F8FAFC;
+  color: #0F172A;
+  position: relative;
+}
+.on-light h1, .on-light h2, .on-light h3, .on-light h4, .on-light h5 { color: #0F172A; }
+.on-light .text-muted { color: #475569 !important; }
+.on-light .text-faint { color: #64748B !important; }
+.on-light .text-white { color: #0F172A !important; }
+.on-light .border-line { border-color: #E2E8F0 !important; }
+.on-light .border-line2 { border-color: #CBD5E1 !important; }
+.on-light .grad-text {
+  background: linear-gradient(100deg, #3B82F6, #1D4ED8 55%, #0EA5E9);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.on-light .eyebrow { color: #2563EB; }
+.on-light .eyebrow::before { background: linear-gradient(90deg, #2563EB, #0EA5E9); }
+.on-light .glass {
+  background: #FFFFFF;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 6px 28px -12px rgba(15,23,42,.12);
+  border-radius: 20px;
+}
+/* Preserve dark "screen" preview inside the mini-env animations */
+.on-light .env-wrap {
+  background: linear-gradient(160deg, #0A1633, #122756) !important;
+  border-color: rgba(15,23,42,.12) !important;
+}
+.on-light .env .tag { color: #B7C4DE !important; }
+.on-light .btn-ghost {
+  background: #FFFFFF; color: #0F172A;
+  border: 1px solid #CBD5E1;
+}
+.on-light .btn-ghost:hover { background: #F1F5F9; }
 
 /* accessible focus */
 :focus-visible { outline: 2px solid #3b82f6; outline-offset: 3px; border-radius: 6px; }

@@ -49,7 +49,7 @@ export default function CustomCursor() {
         ref={ring}
         className="cursor-ring pointer-events-none fixed left-0 top-0 z-[9999] h-9 w-9 -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan/60 mix-blend-screen transition-[width,height,background,border-color] duration-200"
       />
-      <style>{`.cursor-ring.on{width:64px;height:64px;background:rgba(249,115,22,.12);border-color:rgba(249,115,22,.6)}`}</style>
+      <style>{`.cursor-ring.on{width:64px;height:64px;background:rgba(14,165,233,.12);border-color:rgba(14,165,233,.6)}`}</style>
     </>
   );
 }

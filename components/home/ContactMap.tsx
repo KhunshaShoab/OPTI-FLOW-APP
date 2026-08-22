@@ -47,13 +47,13 @@ export default function ContactMap() {
         if (!reduce) { packets[i].t += 0.006; if (packets[i].t > 1) packets[i].t = 0; }
         const pt = arc(origin, d, packets[i].t);
         const grd = g.createRadialGradient(pt.x, pt.y, 0, pt.x, pt.y, 10);
-        grd.addColorStop(0, "rgba(249,115,22,1)"); grd.addColorStop(1, "rgba(249,115,22,0)");
+        grd.addColorStop(0, "rgba(14,165,233,1)"); grd.addColorStop(1, "rgba(14,165,233,0)");
         g.fillStyle = grd; g.beginPath(); g.arc(pt.x, pt.y, 10, 0, 6.28); g.fill();
       });
       // origin glow (Lahore)
       const o = P(origin), pulse = 6 + Math.sin(t * 0.06) * 3;
       const og = g.createRadialGradient(o.x, o.y, 0, o.x, o.y, 26);
-      og.addColorStop(0, "rgba(249,115,22,.9)"); og.addColorStop(1, "rgba(249,115,22,0)");
+      og.addColorStop(0, "rgba(14,165,233,.9)"); og.addColorStop(1, "rgba(14,165,233,0)");
       g.fillStyle = og; g.beginPath(); g.arc(o.x, o.y, 26, 0, 6.28); g.fill();
       g.fillStyle = "#fff"; g.beginPath(); g.arc(o.x, o.y, pulse * 0.5, 0, 6.28); g.fill();
       if (!reduce) raf = requestAnimationFrame(draw);

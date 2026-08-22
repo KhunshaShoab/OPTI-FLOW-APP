@@ -99,7 +99,7 @@ function Card({ s, i }: { s: (typeof SERVICES)[number]; i: number }) {
 
 export default function Services() {
   return (
-    <section id="services" className="relative z-[2] py-28">
+    <section id="services" className="on-light relative z-[2] py-28">
       <div className="shell">
         <SectionHead kicker="What we do" title={<>Support that feels like <span className="grad-text">your own team</span></>} sub="Every channel your customer chooses reaches a trained agent who represents your brand — and is measured on resolving, not deflecting." />
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -115,20 +115,20 @@ export default function Services() {
         .env .bub.typing{top:84px;display:inline-flex;gap:3px}
         .env .bub.typing i{width:5px;height:5px;border-radius:50%;background:#3B82F6;animation:blink 1.2s infinite}
         .env .bub.typing i:nth-child(2){animation-delay:.2s}.env .bub.typing i:nth-child(3){animation-delay:.4s}
-        .env .badge{position:absolute;top:10px;right:12px;min-width:18px;height:18px;border-radius:9px;background:#F97316;color:#fff;font-size:10px;display:grid;place-items:center;font-weight:700}
-        .env .wave{width:4px;border-radius:3px;background:linear-gradient(#3B82F6,#F97316);animation:wave 1s ease-in-out infinite;align-self:center}
+        .env .badge{position:absolute;top:10px;right:12px;min-width:18px;height:18px;border-radius:9px;background:#0EA5E9;color:#fff;font-size:10px;display:grid;place-items:center;font-weight:700}
+        .env .wave{width:4px;border-radius:3px;background:linear-gradient(#3B82F6,#0EA5E9);animation:wave 1s ease-in-out infinite;align-self:center}
         .env .tag{position:absolute;bottom:10px;left:12px;font-size:10.5px;color:#AEB5C8;font-family:var(--font-space)}
         .env .mail{position:absolute;bottom:14px;font-size:20px;animation:rise 2.1s ease-in infinite}
-        .env .folder{position:absolute;top:14px;right:14px;font-size:11px;color:#38BDF8;font-family:var(--font-space)}
+        .env .folder{position:absolute;top:14px;right:14px;font-size:11px;color:#60A5FA;font-family:var(--font-space)}
         .env .chip{width:64px;height:44px;border:1px solid rgba(59,130,246,.4);border-radius:8px;position:relative;box-shadow:0 0 18px -6px #3b82f6}
         .env .chip span{position:absolute;width:8px;height:2px;background:#3B82F6;animation:pulseGlow 1.6s infinite}
         .env .chip span:nth-child(1){top:-3px;left:14px}.env .chip span:nth-child(2){bottom:-3px;left:32px}
         .env .chip span:nth-child(3){left:-9px;top:20px;width:2px;height:8px}.env .chip span:nth-child(4){right:-9px;top:12px;width:2px;height:8px}
         .env .pkg{font-size:30px;animation:floaty 3s ease-in-out infinite}
-        .env .arrow{font-size:24px;color:#F97316;animation:spinSlow 4s linear infinite}
-        .env .bar{width:9px;border-radius:4px 4px 0 0;background:linear-gradient(180deg,#3B82F6,#F97316);animation:barp 2s ease-in-out infinite}
+        .env .arrow{font-size:24px;color:#0EA5E9;animation:spinSlow 4s linear infinite}
+        .env .bar{width:9px;border-radius:4px 4px 0 0;background:linear-gradient(180deg,#3B82F6,#0EA5E9);animation:barp 2s ease-in-out infinite}
         .env .ai-node{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:rgba(59,130,246,.18);border:1px solid rgba(59,130,246,.55);font-size:14px;animation:floaty 3s ease-in-out infinite;box-shadow:0 0 14px -4px rgba(59,130,246,.7)}
-        .env .ai-line{width:22px;height:2px;background:linear-gradient(90deg,#3B82F6,#F97316);border-radius:2px;opacity:.9}
+        .env .ai-line{width:22px;height:2px;background:linear-gradient(90deg,#3B82F6,#0EA5E9);border-radius:2px;opacity:.9}
         @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
         @keyframes wave{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1)}}
         @keyframes rise{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-70px);opacity:0}}

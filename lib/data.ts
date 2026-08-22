@@ -114,11 +114,11 @@ export const ROUTES = [
 export const TICKET_TYPES = [
   { label: "Chat", color: "#3B82F6" },
   { label: "Email", color: "#6E56F0" },
-  { label: "Phone", color: "#38BDF8" },
-  { label: "Shopify DTC", color: "#F97316" },
+  { label: "Phone", color: "#60A5FA" },
+  { label: "Shopify DTC", color: "#0EA5E9" },
   { label: "Technical", color: "#F5A524" },
   { label: "Billing", color: "#22C55E" },
-  { label: "Returns", color: "#38BDF8" },
+  { label: "Returns", color: "#60A5FA" },
   { label: "Warranty", color: "#A855F7" },
   { label: "Subscriptions", color: "#F472B6" },
 ];
