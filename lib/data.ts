@@ -12,7 +12,6 @@ export const NAV = [
   { label: "Services", href: "/services" },
   { label: "Industries", href: "/industries" },
   { label: "Why Us", href: "/why-optiflow" },
-  { label: "Case Studies", href: "/case-studies" },
   { label: "How It Works", href: "/how-it-works" },
   { label: "Contact", href: "/contact" },
 ];
@@ -70,12 +69,6 @@ export const INDUSTRIES = [
   { icon: "Cloud", name: "SaaS", info: "Onboarding, billing, retention and tier-1 troubleshooting." },
   { icon: "Cpu", name: "Hardware", info: "Setup, firmware, warranty and technical diagnostics." },
   { icon: "Repeat", name: "Subscriptions", info: "Billing, churn-saves and membership support." },
-];
-
-export const CASES = [
-  { client: "Creality3D", tag: "Consumer 3D Printing", challenge: "A global hardware brand with complex technical tickets and rising escalations.", solution: "Tier 1 + Tier 2 specialists trained on the full product line — real troubleshooting, not scripts.", result: "Faster first response, fewer escalations." },
-  { client: "Yarbo", tag: "Outdoor Robotics", challenge: "A sophisticated, high-value connected robot needing genuinely expert help.", solution: "Specialist agents guiding setup, firmware and warranty with patience and precision.", result: "Confident customers, protected reputation." },
-  { client: "Everwash", tag: "Subscription SaaS", challenge: "Billing and membership questions quietly threatening retention.", solution: "Dedicated agents owning billing, membership and retention-critical conversations.", result: "Retention issues resolved with care." },
 ];
 
 export const PROCESS = [

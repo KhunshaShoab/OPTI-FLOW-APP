@@ -2,7 +2,6 @@ import Hero from "@/components/home/Hero";
 import Trust from "@/components/home/Trust";
 import Services from "@/components/home/Services";
 import WhyDashboard from "@/components/home/WhyDashboard";
-import CaseStudies from "@/components/home/CaseStudies";
 import Process from "@/components/home/Process";
 import Industries from "@/components/home/Industries";
 import Security from "@/components/home/Security";
@@ -39,7 +38,6 @@ export default function Home() {
       <Trust />
       <Services />
       <WhyDashboard />
-      <CaseStudies />
       <Process />
       <Industries />
       <Security />

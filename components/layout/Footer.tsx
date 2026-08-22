@@ -3,7 +3,7 @@ import { SITE } from "@/lib/data";
 
 const COLS = [
   { h: "Services", links: [["Live Chat", "/services"], ["Phone Support", "/services"], ["Email Support", "/services"], ["Shopify DTC Support", "/services"], ["VA Receptionist", "/services"], ["AI Automations", "/services"]] },
-  { h: "Company", links: [["Why Us", "/why-optiflow"], ["Case Studies", "/case-studies"], ["How It Works", "/how-it-works"], ["About", "/about"]] },
+  { h: "Company", links: [["Why Us", "/why-optiflow"], ["How It Works", "/how-it-works"], ["About", "/about"]] },
   { h: "More", links: [["Pricing", "/pricing"], ["Careers", "/careers"], ["Blog", "/blog"], ["Contact", "/contact"]] },
 ];
 
