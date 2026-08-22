@@ -18,7 +18,7 @@ export default function Page() {
         {TIERS.map((t, i) => (
           <Reveal key={t.name} delay={i * 0.09}>
             <div className={`glass relative h-full p-8 ${t.accent ? "border-line2 glow-cyan" : ""}`}>
-              {t.accent && <div className="absolute inset-x-0 top-0 h-1 animate-slide" style={{ background: "linear-gradient(90deg,#EC1866,#00D4FF,#00C2A8)", backgroundSize: "200% 100%" }} />}
+              {t.accent && <div className="absolute inset-x-0 top-0 h-1 animate-slide" style={{ background: "linear-gradient(90deg,#F97316,#3B82F6,#38BDF8)", backgroundSize: "200% 100%" }} />}
               <div className="font-grotesk text-sm uppercase tracking-wide text-cyan">{t.tagline}</div>
               <h3 className="h-display mt-2 text-2xl">{t.name}</h3>
               <div className="mt-3 font-display text-3xl font-bold">{t.price}</div>

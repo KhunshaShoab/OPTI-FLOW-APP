@@ -9,12 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#090B1A",
-        bg2: "#11172B",
-        bg3: "#0C1024",
-        mag: "#EC1866",
-        cyan: "#00D4FF",
-        teal: "#00C2A8",
+        bg: "#0B1E3F",
+        bg2: "#14224D",
+        bg3: "#0F2145",
+        mag: "#F97316",
+        cyan: "#3B82F6",
+        teal: "#38BDF8",
         ink: "#FFFFFF",
         muted: "#B7BDD2",
         faint: "#6A7290",
@@ -43,8 +43,8 @@ const config: Config = {
         marquee: { to: { transform: "translateX(-50%)" } },
         slide: { to: { backgroundPosition: "200% 0" } },
         pulseGlow: {
-          "0%,100%": { boxShadow: "0 0 8px rgba(0,212,255,.6)" },
-          "50%": { boxShadow: "0 0 20px rgba(0,212,255,.9)" },
+          "0%,100%": { boxShadow: "0 0 8px rgba(59,130,246,.6)" },
+          "50%": { boxShadow: "0 0 20px rgba(59,130,246,.9)" },
         },
       },
       animation: {

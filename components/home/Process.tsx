@@ -17,12 +17,12 @@ export default function Process() {
         <div ref={ref} className="relative mt-4">
           {/* animated beam */}
           <div className="absolute left-[6%] right-[6%] top-[34px] hidden h-0.5 overflow-hidden rounded bg-white/10 md:block">
-            <div className="h-full transition-[width] duration-[1600ms] ease-out" style={{ width: inView ? "100%" : "0%", background: "linear-gradient(90deg,#EC1866,#00D4FF,#00C2A8)", boxShadow: "0 0 14px #00d4ff" }} />
+            <div className="h-full transition-[width] duration-[1600ms] ease-out" style={{ width: inView ? "100%" : "0%", background: "linear-gradient(90deg,#F97316,#3B82F6,#38BDF8)", boxShadow: "0 0 14px #3b82f6" }} />
           </div>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
             {PROCESS.map((p, i) => (
               <div key={p.title} className="text-center">
-                <div className={`mx-auto mb-5 grid h-[68px] w-[68px] place-items-center rounded-full border text-cyan transition-all duration-700 ${inView ? "border-cyan glow-cyan" : "border-line"}`} style={{ transitionDelay: `${i * 300 + 300}ms`, background: inView ? "linear-gradient(150deg,rgba(0,212,255,.18),rgba(236,24,102,.12))" : "rgba(255,255,255,.03)" }}>
+                <div className={`mx-auto mb-5 grid h-[68px] w-[68px] place-items-center rounded-full border text-cyan transition-all duration-700 ${inView ? "border-cyan glow-cyan" : "border-line"}`} style={{ transitionDelay: `${i * 300 + 300}ms`, background: inView ? "linear-gradient(150deg,rgba(59,130,246,.18),rgba(249,115,22,.12))" : "rgba(255,255,255,.03)" }}>
                   <Icon name={p.icon} className="h-7 w-7" />
                 </div>
                 <h4 className={`font-display text-lg font-semibold transition-opacity duration-700 ${inView ? "opacity-100" : "opacity-50"}`} style={{ transitionDelay: `${i * 300 + 300}ms` }}>{p.title}</h4>

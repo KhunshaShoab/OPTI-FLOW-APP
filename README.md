@@ -44,7 +44,7 @@ npm run build && npm run start
 | Content (services, cases, etc.) | `lib/data.ts` |
 
 ## Design system
-- **Colors:** bg `#090B1A`, bg2 `#11172B`, magenta `#EC1866`, cyan `#00D4FF`, teal `#00C2A8`, text `#FFFFFF`, muted `#B7BDD2`.
+- **Colors:** bg `#0B1E3F`, bg2 `#14224D`, magenta `#F97316`, cyan `#3B82F6`, teal `#38BDF8`, text `#FFFFFF`, muted `#B7BDD2`.
 - **Fonts:** Sora (display), Space Grotesk (labels/nav), Inter (body) — self-hosted via `next/font` (no CDN).
 
 ## Accessibility & performance

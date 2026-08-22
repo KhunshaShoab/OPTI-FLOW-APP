@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: { default: `${SITE.name} — ${SITE.tagline}`, template: `%s — ${SITE.name}` },
   description:
-    "Premium global customer-support outsourcing — live chat, phone, email, technical and Amazon support — for US, UK, EU, AU & ME brands. Proudly based in Lahore, Pakistan.",
-  keywords: ["customer support outsourcing", "BPO", "Amazon seller support", "technical support", "live chat", "OptiFlow"],
+    "Premium global customer-support outsourcing — live chat, phone, email, technical, Shopify DTC support, VA receptionist and AI automations — for US, UK, EU, AU & ME brands. Proudly based in Lahore, Pakistan.",
+  keywords: ["customer support outsourcing", "BPO", "Shopify DTC support", "VA receptionist", "AI automations", "technical support", "live chat", "OptiFlow"],
   openGraph: {
     type: "website",
     title: `${SITE.name} — ${SITE.tagline}`,
@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     email: SITE.email,
     address: { "@type": "PostalAddress", addressLocality: "Lahore", addressCountry: "PK" },
     areaServed: SITE.markets,
-    description: "Customer-support outsourcing: live chat, phone, email, technical and Amazon seller support.",
+    description: "Customer-support outsourcing: live chat, phone, email, technical, Shopify DTC support, VA receptionist and AI automations.",
   };
 
   return (

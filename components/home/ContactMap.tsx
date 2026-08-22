@@ -38,22 +38,22 @@ export default function ContactMap() {
       dests.forEach((d) => {
         const s0 = arc(origin, d, 0);
         g.beginPath(); g.moveTo(s0.A.x, s0.A.y); g.quadraticCurveTo(s0.cx, s0.cy, s0.B.x, s0.B.y);
-        g.strokeStyle = "rgba(0,212,255,.28)"; g.lineWidth = 1.2; g.stroke();
+        g.strokeStyle = "rgba(59,130,246,.28)"; g.lineWidth = 1.2; g.stroke();
         const dp = P(d);
-        g.fillStyle = "rgba(0,212,255,.9)"; g.beginPath(); g.arc(dp.x, dp.y, 3, 0, 6.28); g.fill();
+        g.fillStyle = "rgba(59,130,246,.9)"; g.beginPath(); g.arc(dp.x, dp.y, 3, 0, 6.28); g.fill();
       });
       // packets
       dests.forEach((d, i) => {
         if (!reduce) { packets[i].t += 0.006; if (packets[i].t > 1) packets[i].t = 0; }
         const pt = arc(origin, d, packets[i].t);
         const grd = g.createRadialGradient(pt.x, pt.y, 0, pt.x, pt.y, 10);
-        grd.addColorStop(0, "rgba(236,24,102,1)"); grd.addColorStop(1, "rgba(236,24,102,0)");
+        grd.addColorStop(0, "rgba(249,115,22,1)"); grd.addColorStop(1, "rgba(249,115,22,0)");
         g.fillStyle = grd; g.beginPath(); g.arc(pt.x, pt.y, 10, 0, 6.28); g.fill();
       });
       // origin glow (Lahore)
       const o = P(origin), pulse = 6 + Math.sin(t * 0.06) * 3;
       const og = g.createRadialGradient(o.x, o.y, 0, o.x, o.y, 26);
-      og.addColorStop(0, "rgba(236,24,102,.9)"); og.addColorStop(1, "rgba(236,24,102,0)");
+      og.addColorStop(0, "rgba(249,115,22,.9)"); og.addColorStop(1, "rgba(249,115,22,0)");
       g.fillStyle = og; g.beginPath(); g.arc(o.x, o.y, 26, 0, 6.28); g.fill();
       g.fillStyle = "#fff"; g.beginPath(); g.arc(o.x, o.y, pulse * 0.5, 0, 6.28); g.fill();
       if (!reduce) raf = requestAnimationFrame(draw);
@@ -102,7 +102,7 @@ export default function ContactMap() {
               <Field label="How can we help?" className="mt-4"><textarea placeholder="Tell us about your support setup and goals…" className="fld min-h-[110px] resize-y" /></Field>
               <button type="submit" className="btn btn-primary mt-5 w-full justify-center"><span className="relative z-[2]">Request a consultation</span></button>
               <p className="mt-2.5 text-xs text-faint">Demo form — connect to Formspree / HubSpot to receive submissions, and embed your Calendly on the “Book a call” buttons.</p>
-              <style>{`.fld{width:100%;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:12px 14px;color:#fff;font-size:14.5px;font-family:var(--font-inter);transition:.25s}.fld:focus{outline:none;border-color:#00d4ff;background:rgba(255,255,255,.05);box-shadow:0 0 0 3px rgba(0,212,255,.14)}`}</style>
+              <style>{`.fld{width:100%;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:12px 14px;color:#fff;font-size:14.5px;font-family:var(--font-inter);transition:.25s}.fld:focus{outline:none;border-color:#3b82f6;background:rgba(255,255,255,.05);box-shadow:0 0 0 3px rgba(59,130,246,.14)}`}</style>
             </form>
           </Reveal>
         </div>

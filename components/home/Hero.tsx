@@ -50,7 +50,7 @@ export default function Hero() {
         </h1>
 
         <motion.p variants={rise} initial="hidden" animate="show" custom={3} className="mx-auto mt-7 max-w-xl text-[clamp(15px,1.7vw,19px)] leading-relaxed text-muted">
-          OptiFlow orchestrates thousands of customer interactions — chat, phone, email, technical and Amazon support — into one seamless, always-on operation for brands across the US, UK, EU, AU &amp; ME.
+          OptiFlow orchestrates thousands of customer interactions — chat, phone, email, technical, Shopify DTC support, VA receptionist and AI automations — into one seamless, always-on operation for brands across the US, UK, EU, AU &amp; ME.
         </motion.p>
 
         <motion.div variants={rise} initial="hidden" animate="show" custom={4} className="mt-10 flex flex-wrap justify-center gap-4">
@@ -65,10 +65,10 @@ export default function Hero() {
       <div className="absolute bottom-6 left-1/2 z-[4] -translate-x-1/2 font-grotesk text-[11px] uppercase tracking-[0.22em] text-faint">Scroll to explore</div>
 
       <style>{`
-        .hero-title{ text-shadow: 0 0 34px rgba(0,212,255,.10); animation: heroGlow 7s ease-in-out infinite; }
+        .hero-title{ text-shadow: 0 0 34px rgba(59,130,246,.10); animation: heroGlow 7s ease-in-out infinite; }
         @keyframes heroGlow{
-          0%,100%{ text-shadow: 0 2px 40px rgba(0,212,255,.12), 0 0 2px rgba(255,255,255,.10); }
-          50%{ text-shadow: 0 2px 54px rgba(236,24,102,.16), 0 0 3px rgba(255,255,255,.14); }
+          0%,100%{ text-shadow: 0 2px 40px rgba(59,130,246,.12), 0 0 2px rgba(255,255,255,.10); }
+          50%{ text-shadow: 0 2px 54px rgba(249,115,22,.16), 0 0 3px rgba(255,255,255,.14); }
         }
         @media (prefers-reduced-motion: reduce){ .hero-title{ animation: none; } }
       `}</style>
