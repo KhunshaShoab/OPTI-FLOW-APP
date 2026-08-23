@@ -1,28 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { FEATURES } from "@/lib/data";
 import Reveal from "@/components/ui/Reveal";
-
-function CountUp({ to, suffix = "" }: { to: number; suffix?: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-20%" });
-  const [n, setN] = useState(0);
-  useEffect(() => {
-    if (!inView) return;
-    let raf = 0, start = 0;
-    const step = (ts: number) => {
-      if (!start) start = ts;
-      const p = Math.min(1, (ts - start) / 1200);
-      setN(Math.round(to * (1 - Math.pow(1 - p, 3))));
-      if (p < 1) raf = requestAnimationFrame(step);
-    };
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [inView, to]);
-  return <span ref={ref} className="tabular-nums">{n}{suffix}</span>;
-}
 
 const BARS = [38, 52, 45, 66, 58, 74, 69, 82, 76, 90, 84, 96];
 
@@ -36,7 +17,7 @@ export default function WhyDashboard() {
         <Reveal>
           <span className="eyebrow">Why OptiFlow</span>
           <h2 className="h-display mt-5 text-[clamp(30px,4.4vw,50px)]">Everything flows around one thing — <span className="grad-text">your growth</span></h2>
-          <p className="mt-5 max-w-lg text-muted">Support isn't a cost centre. Done right, it protects revenue, ratings and retention. Five reasons brands choose us.</p>
+          <p className="mt-5 max-w-lg text-muted">Customer support should protect revenue, retention and reputation — not become another operational bottleneck.</p>
           <div className="mt-2">
             {FEATURES.map((f) => (
               <div key={f.n} className="group flex gap-4 border-t border-line py-5 transition-all last:border-b hover:pl-2.5 hover:[background:linear-gradient(90deg,rgba(59,130,246,.05),transparent)]">
@@ -58,10 +39,15 @@ export default function WhyDashboard() {
               <span className="flex items-center gap-2 font-grotesk text-[11px] text-teal"><span className="h-[7px] w-[7px] animate-pulseGlow rounded-full bg-teal" />Live</span>
             </div>
             <div className="relative grid grid-cols-2 gap-3.5">
-              {[["24", "/7", "COVERAGE"], ["3", "", "CHANNELS"], ["98", "%", "CSAT TARGET"], ["5", "+", "REGIONS"]].map(([v, s, k]) => (
-                <div key={k} className="rounded-[14px] border border-line bg-white/[0.03] px-[18px] py-4">
-                  <div className="font-display text-3xl font-bold leading-none"><CountUp to={Number(v)} suffix={s as string} /></div>
-                  <div className="mt-1.5 font-grotesk text-[11.5px] tracking-wide text-faint">{k}</div>
+              {[
+                { head: "24/7", sub: "Coverage options" },
+                { head: "MULTI-CHANNEL", sub: "Chat · Phone · Email" },
+                { head: "SCALE-READY", sub: "Flexible capacity" },
+                { head: "GLOBAL", sub: "Multi-time-zone support" },
+              ].map((tile) => (
+                <div key={tile.head} className="rounded-[14px] border border-line bg-white/[0.03] px-[18px] py-4">
+                  <div className="font-display text-[18px] font-bold leading-tight tracking-wide text-cyan">{tile.head}</div>
+                  <div className="mt-1.5 font-grotesk text-[12px] tracking-wide text-muted">{tile.sub}</div>
                 </div>
               ))}
             </div>

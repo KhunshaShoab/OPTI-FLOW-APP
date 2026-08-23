@@ -101,8 +101,8 @@ export default function Services() {
   return (
     <section id="services" className="on-light relative z-[2] py-28">
       <div className="shell">
-        <SectionHead kicker="What we do" title={<>Support that feels like <span className="grad-text">your own team</span></>} sub="Every channel your customer chooses reaches a trained agent who represents your brand — and is measured on resolving, not deflecting." />
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <SectionHead kicker="What we do" title={<>Support that feels like <span className="grad-text">your own team</span></>} sub="Every conversation is handled by trained agents who learn your brand, follow your processes and focus on resolving the customer's problem — not simply closing the ticket." />
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 lg:[&>*:nth-child(7)]:col-start-2">
           {SERVICES.map((s, i) => <Card key={s.title} s={s} i={i} />)}
         </div>
       </div>

@@ -77,13 +77,13 @@ export default function ContactMap() {
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
             <span className="eyebrow">Get in touch</span>
-            <h2 className="h-display mt-4 text-[clamp(28px,4vw,44px)]">Tell us about your support</h2>
-            <p className="mt-4 text-[15.5px] text-muted">Share your channels, monthly volume and coverage needs — we'll map out exactly how OptiFlow can take support off your plate.</p>
+            <h2 className="h-display mt-4 text-[clamp(28px,4vw,44px)]">Let's optimize your customer experience.</h2>
+            <p className="mt-4 text-[15.5px] text-muted">Tell us what you're handling today — your channels, volume, coverage needs and biggest operational bottleneck. We'll show you where OptiFlow can fit.</p>
             <ul className="mt-8 space-y-4">
               <li className="flex items-center gap-3 text-[15px] text-[#dfe3f0]"><span className="grid h-10 w-10 flex-none place-items-center rounded-xl border border-line bg-glass">✉️</span> {SITE.email}</li>
               <li className="flex items-center gap-3 text-[15px] text-[#dfe3f0]"><span className="grid h-10 w-10 flex-none animate-pulseGlow place-items-center rounded-xl text-white" style={{ background: "linear-gradient(140deg,#25D366,#128C7E)" }}>💬</span> WhatsApp: {SITE.whatsapp}</li>
-              <li className="flex items-center gap-3 text-[15px] text-[#dfe3f0]"><span className="grid h-10 w-10 flex-none place-items-center rounded-xl border border-line bg-glass">📍</span> {SITE.location} · Serving US · UK · EU · AU · ME</li>
-              <li className="flex items-center gap-3 text-[15px] text-[#dfe3f0]"><span className="grid h-10 w-10 flex-none place-items-center rounded-xl border border-line bg-glass">🕑</span> Coverage in every time zone, 24/7</li>
+              <li className="flex items-center gap-3 text-[15px] text-[#dfe3f0]"><span className="grid h-10 w-10 flex-none place-items-center rounded-xl border border-line bg-glass">📍</span> {SITE.location} · Serving global brands</li>
+              <li className="flex items-center gap-3 text-[15px] text-[#dfe3f0]"><span className="grid h-10 w-10 flex-none place-items-center rounded-xl border border-line bg-glass">🕑</span> Coverage across multiple time zones</li>
             </ul>
           </Reveal>
 
@@ -95,11 +95,18 @@ export default function ContactMap() {
               </div>
               <div className="mt-4 grid gap-3.5 sm:grid-cols-2">
                 <Field label="Work email"><input required type="email" placeholder="you@company.com" className="fld" /></Field>
-                <Field label="Monthly volume">
-                  <select className="fld"><option>Under 1,000</option><option>1,000 – 5,000</option><option>5,000 – 20,000</option><option>20,000+</option></select>
+                <Field label="Monthly support volume">
+                  <select className="fld" defaultValue="">
+                    <option value="" disabled>Select a range</option>
+                    <option>Under 1,000</option>
+                    <option>1,000 – 5,000</option>
+                    <option>5,000 – 10,000</option>
+                    <option>10,000 – 25,000</option>
+                    <option>25,000+</option>
+                  </select>
                 </Field>
               </div>
-              <Field label="How can we help?" className="mt-4"><textarea placeholder="Tell us about your support setup and goals…" className="fld min-h-[110px] resize-y" /></Field>
+              <Field label="How can we help?" className="mt-4"><textarea placeholder="Tell us about your current support setup, channels and goals…" className="fld min-h-[110px] resize-y" /></Field>
               <button type="submit" className="btn btn-primary mt-5 w-full justify-center"><span className="relative z-[2]">Request a consultation</span></button>
               <p className="mt-2.5 text-xs text-faint">Demo form — connect to Formspree / HubSpot to receive submissions, and embed your Calendly on the “Book a call” buttons.</p>
               <style>{`.fld{width:100%;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:12px 14px;color:#fff;font-size:14.5px;font-family:var(--font-inter);transition:.25s}.fld:focus{outline:none;border-color:#3b82f6;background:rgba(255,255,255,.05);box-shadow:0 0 0 3px rgba(59,130,246,.14)}`}</style>

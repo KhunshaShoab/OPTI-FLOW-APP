@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Contact", description: "Book a free 
 
 export default function Page() {
   return (
-    <PageShell kicker="Contact" title={<>Let's <span className="grad-text">talk.</span></>} intro="Tell us your channels, volume and coverage needs — we'll map out how OptiFlow takes support off your plate." cta={false}>
+    <PageShell kicker="Contact" title={<>Let's <span className="grad-text">talk.</span></>} intro="Tell us what you're handling today — your channels, volume, coverage needs and biggest operational bottleneck. We'll show you where OptiFlow can fit." cta={false}>
       <ContactMap />
     </PageShell>
   );
