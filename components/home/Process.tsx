@@ -13,7 +13,7 @@ export default function Process() {
   return (
     <section id="process" className="on-light relative z-[2] py-28">
       <div className="shell">
-        <SectionHead kicker="How it works" title="A futuristic production line" sub="From first call to a support team that feels like your own — live in days, not months." />
+        <SectionHead kicker="How it works" title={<>A support operation built <span className="grad-text">around your business</span></>} sub="From the first conversation to a fully operational support team, we keep the process simple, transparent and focused on getting you live quickly." />
         <div ref={ref} className="relative mt-4">
           {/* animated beam */}
           <div className="absolute left-[6%] right-[6%] top-[34px] hidden h-0.5 overflow-hidden rounded bg-white/10 md:block">

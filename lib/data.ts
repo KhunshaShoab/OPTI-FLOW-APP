@@ -16,51 +16,50 @@ export const NAV = [
   { label: "Contact", href: "/contact" },
 ];
 
-// Benefit-first copy — every service answers "why trust us with your customers?"
 export const SERVICES = [
   {
     icon: "MessageSquare", env: "chat", title: "Live Chat",
-    desc: "Your customers deserve responses that feel personal, fast, and effortless. We build dedicated teams that represent your brand like they're sitting in your own office.",
+    desc: "Fast, thoughtful conversations that help customers get answers without feeling like they're talking to a support script. Our agents work inside your helpdesk, learn your brand voice and handle everyday questions, troubleshooting and escalations.",
     tags: ["Gorgias", "Zendesk", "Intercom"],
   },
   {
     icon: "Headphones", env: "phone", title: "Phone Support",
-    desc: "A calm, capable voice on the line the moment your customer needs one — handling inbound and outbound calls with the warmth of an in-house team.",
+    desc: "A reliable voice on the line when your customers need one. We handle inbound calls, outbound follow-ups, escalations and customer conversations with the tone and professionalism your brand expects.",
     tags: ["Inbound", "Outbound", "Escalations"],
   },
   {
     icon: "Mail", env: "email", title: "Email Support",
-    desc: "Thoughtful, well-written replies that resolve the issue the first time — consistent tone, tidy tickets, and SLAs your customers can feel.",
+    desc: "Clear, well-written responses that solve the issue instead of creating another ticket. We manage customer emails, follow your SOPs and maintain consistent tone, documentation and response standards.",
     tags: ["Freshdesk", "Help Scout", "Re:amaze"],
   },
   {
     icon: "Wrench", env: "tech", title: "Technical Support",
-    desc: "Complex products need knowledgeable support. From troubleshooting hardware to resolving software issues, our specialists handle the conversations generic call centers can't.",
+    desc: "Technical products need more than scripted answers. Our support teams can handle troubleshooting, diagnostics, product questions and structured escalations — helping customers reach a resolution faster.",
     tags: ["Tier 1", "Tier 2", "Diagnostics"],
   },
   {
-    icon: "ShoppingBag", env: "shopify", title: "Shopify DTC Support",
-    desc: "End-to-end care for direct-to-consumer Shopify brands — WISMO, exchanges, subscriptions, and pre-sale conversion handled by agents fluent in your storefront and stack.",
+    icon: "ShoppingBag", env: "shopify", title: "Shopify & eCommerce Support",
+    desc: "Give your storefront the support team it deserves. We handle order questions, returns, exchanges, subscriptions, product enquiries and pre-sale conversations across your customer journey.",
     tags: ["Shopify", "Recharge", "Klaviyo"],
   },
   {
-    icon: "PhoneCall", env: "receptionist", title: "VA Receptionist",
-    desc: "A polished, dedicated virtual receptionist answering calls, booking appointments and routing messages — the composed first impression your business deserves.",
-    tags: ["Live answer", "Scheduling", "Routing"],
+    icon: "PhoneCall", env: "receptionist", title: "Virtual Receptionist",
+    desc: "A professional first point of contact for your business. We answer calls, qualify enquiries, schedule appointments, route messages and make sure important conversations never disappear into voicemail.",
+    tags: ["Live Answer", "Scheduling", "Routing"],
   },
   {
     icon: "Sparkles", env: "ai", title: "AI Automations",
-    desc: "Custom AI workflows that draft replies, triage tickets and automate repetitive ops — so your team spends time on customers, not on busywork.",
-    tags: ["Workflows", "GPT-powered", "Zapier / Make"],
+    desc: "Automate the repetitive work around your support operation. We build workflows that draft responses, triage requests, update systems and move routine tasks forward — while your team focuses on customers.",
+    tags: ["Automation", "Triage", "Workflows"],
   },
 ];
 
 export const FEATURES = [
-  { n: "01", title: "We resolve, we don't deflect", desc: "Proven with technical brands like Creality3D, Yarbo and Everwash — real problem-solving, not scripted deflection." },
-  { n: "02", title: "Always-on, follow-the-sun coverage", desc: "As one time zone sleeps, another lights up. Someone is always working your queue — nights, weekends, holidays." },
-  { n: "03", title: "Calm at 10 or 10,000 tickets", desc: "Launches, viral moments and BFCM absorbed by cross-trained agents — response times hold when volume spikes." },
-  { n: "04", title: "Your brand voice, every message", desc: "The same agent speaks luxury, friendly or professional — trained on your tone, macros and SOPs." },
-  { n: "05", title: "Transparent & global", desc: "Proudly based in Lahore, Pakistan — supporting brands across the US, UK, EU, AU & ME." },
+  { n: "01", title: "We resolve, we don't deflect", desc: "Customers should not have to repeat themselves or fight through scripts. Our teams are trained to understand the issue, follow your processes and work toward resolution." },
+  { n: "02", title: "Coverage that fits your operation", desc: "Need business-hours support, extended coverage or 24/7 operations? We build coverage around your customers, channels and ticket volume." },
+  { n: "03", title: "Built for changing volumes", desc: "Launches, promotions and seasonal spikes can change support volume overnight. Our teams are structured to scale with demand without sacrificing response quality." },
+  { n: "04", title: "Your brand voice, every conversation", desc: "Your customers should feel like they are speaking to your team. We learn your tone, SOPs, products and escalation rules before going live." },
+  { n: "05", title: "Transparent, global operations", desc: "Based in Lahore, Pakistan and built to support international brands across multiple time zones, channels and customer journeys." },
 ];
 
 export const INDUSTRIES = [
@@ -72,19 +71,19 @@ export const INDUSTRIES = [
 ];
 
 export const PROCESS = [
-  { icon: "Search", title: "Discovery", desc: "We learn your product, tone, tools and ticket volumes." },
-  { icon: "GraduationCap", title: "Training", desc: "Agents trained on your SOPs, macros and systems." },
-  { icon: "Rocket", title: "Pilot", desc: "A short, paid pilot proves quality and fit — low risk." },
-  { icon: "TrendingUp", title: "Scale", desc: "We ramp capacity as your volume grows." },
+  { icon: "Search", title: "Discovery", desc: "We learn your products, customers, support channels, tools, SOPs and expected ticket volume." },
+  { icon: "GraduationCap", title: "Training", desc: "Your dedicated team learns your brand voice, workflows, systems, macros and escalation process." },
+  { icon: "Rocket", title: "Pilot", desc: "Start with a focused pilot to validate quality, workflow and fit before expanding." },
+  { icon: "TrendingUp", title: "Scale", desc: "Increase coverage, channels and capacity as your customer volume grows." },
 ];
 
 export const SECURITY = [
-  "Signed NDAs & confidentiality",
+  "Confidentiality & NDAs",
+  "Access-controlled systems",
   "GDPR-aware data handling",
-  "Secure, access-controlled systems",
-  "Native-level English agents",
   "Dedicated QA & reporting",
-  "No long lock-in contracts",
+  "Secure operational processes",
+  "No unnecessary long-term lock-ins",
 ];
 
 export const TESTIMONIALS = [

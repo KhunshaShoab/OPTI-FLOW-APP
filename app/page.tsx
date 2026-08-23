@@ -16,18 +16,18 @@ import Link from "next/link";
 const HOMEPAGE_SERVICES = [
   {
     icon: "PhoneCall",
-    title: "VA Receptionist",
-    desc: "A poised, dedicated virtual receptionist answering every call, booking appointments and routing messages with a smile in their voice.",
+    title: "Virtual Receptionist",
+    desc: "A professional voice for your business — answering calls, scheduling appointments, routing enquiries and making sure important conversations reach the right person.",
   },
   {
     icon: "Sparkles",
     title: "AI Automations",
-    desc: "Custom AI workflows that draft replies, triage tickets and automate repeat ops — freeing your team to focus on customers, not busywork.",
+    desc: "Automate repetitive operational work such as ticket triage, response drafting, notifications, data updates and internal workflows.",
   },
   {
     icon: "Plug",
     title: "AI Integrations",
-    desc: "We connect the tools you already use — Shopify, HubSpot, Zendesk, Slack — with intelligent AI layers that speak fluently to each of them.",
+    desc: "Connect the tools your team already uses and add intelligent workflows where they create real operational value.",
   },
 ];
 
@@ -46,11 +46,11 @@ export default function Home() {
       <section className="on-light relative z-[2] py-32 text-center">
         <div className="shell">
           <Reveal>
-            <h2 className="h-display text-[clamp(34px,5.6vw,64px)]">Let's <span className="grad-text">optimize</span> your<br />customer experience</h2>
-            <p className="mx-auto mt-5 max-w-md text-muted">Start with a short, low-risk paid pilot and see the difference in weeks.</p>
+            <h2 className="h-display text-[clamp(34px,5.6vw,64px)]">Let's <span className="grad-text">optimize</span> your<br />customer experience.</h2>
+            <p className="mx-auto mt-5 max-w-xl text-muted">Tell us what you're handling today — your channels, volume, coverage needs and biggest operational bottleneck. We'll show you where OptiFlow can fit.</p>
             <div className="mt-9 flex flex-wrap justify-center gap-4">
               <MagneticButton href="/contact">Book a free consultation</MagneticButton>
-              <MagneticButton href="/services" variant="ghost">Explore services</MagneticButton>
+              <MagneticButton href="/services" variant="ghost">Explore our services</MagneticButton>
             </div>
           </Reveal>
         </div>
@@ -59,9 +59,9 @@ export default function Home() {
       <section id="more-services" className="on-light relative z-[2] py-24">
         <div className="shell">
           <SectionHead
-            kicker="Services"
-            title={<>Explore what else <span className="grad-text">we handle</span></>}
-            sub="Beyond frontline support, we run the receptionist desk, ship AI automations, and wire everything into the tools your team already uses."
+            kicker="Additional capabilities"
+            title={<>More than support. <br className="hidden md:block" />An extension of <span className="grad-text">your operations</span></>}
+            sub="Beyond frontline customer support, OptiFlow can manage the operational work around it — from virtual reception and AI workflows to integrations that connect your existing systems."
           />
           <div className="grid gap-5 md:grid-cols-3">
             {HOMEPAGE_SERVICES.map((s, i) => (

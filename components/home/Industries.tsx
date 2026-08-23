@@ -9,7 +9,7 @@ export default function Industries() {
   return (
     <section id="industries" className="relative z-[2] py-28">
       <div className="shell">
-        <SectionHead kicker="Industries" title="Support tuned to your world" sub="Hover a cube to open it — each vertical gets specialists, not generalists." />
+        <SectionHead kicker="Industries" title="Support tuned to your world" sub="Different products create different support challenges. We build teams around the customers, workflows and tools specific to your business." />
         <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-5">
           {INDUSTRIES.map((ind, i) => (
             <Reveal key={ind.name} delay={i * 0.08}>

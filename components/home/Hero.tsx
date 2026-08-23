@@ -44,18 +44,18 @@ export default function Hero() {
           The Operations Engine for global CX
         </motion.span>
 
-        <h1 className="hero-title mx-auto mt-7 max-w-[15ch] font-display font-extrabold leading-[0.95] tracking-[-0.015em] text-[clamp(58px,10vw,132px)]">
-          <motion.span variants={rise} initial="hidden" animate="show" custom={1} className="block">Operations,</motion.span>
-          <motion.span variants={rise} initial="hidden" animate="show" custom={2} className="block grad-text">Optimized.</motion.span>
+        <h1 className="hero-title mx-auto mt-7 max-w-[16ch] font-display font-extrabold leading-[0.98] tracking-[-0.015em] text-[clamp(48px,8.4vw,108px)]">
+          <motion.span variants={rise} initial="hidden" animate="show" custom={1} className="block">Customer support,</motion.span>
+          <motion.span variants={rise} initial="hidden" animate="show" custom={2} className="block grad-text">optimized for growth.</motion.span>
         </h1>
 
-        <motion.p variants={rise} initial="hidden" animate="show" custom={3} className="mx-auto mt-7 max-w-xl text-[clamp(15px,1.7vw,19px)] leading-relaxed text-muted">
-          OptiFlow orchestrates thousands of customer interactions — chat, phone, email, technical, Shopify DTC support, VA receptionist and AI automations — into one seamless, always-on operation for brands across the US, UK, EU, AU &amp; ME.
+        <motion.p variants={rise} initial="hidden" animate="show" custom={3} className="mx-auto mt-7 max-w-2xl text-[clamp(15px,1.7vw,19px)] leading-relaxed text-muted">
+          OptiFlow gives growing brands the people, processes and technology to run customer support without the operational overhead of building everything in-house.
         </motion.p>
 
         <motion.div variants={rise} initial="hidden" animate="show" custom={4} className="mt-10 flex flex-wrap justify-center gap-4">
           <MagneticButton href="/contact">Book a free consultation</MagneticButton>
-          <MagneticButton href="/services" variant="ghost">Explore the platform</MagneticButton>
+          <MagneticButton href="/services" variant="ghost">Explore our services</MagneticButton>
         </motion.div>
       </div>
 

@@ -49,8 +49,8 @@ export default function Security() {
                   <Lock className="h-6 w-6" strokeWidth={1.6} />
                 </div>
                 <span className="eyebrow">Security &amp; trust</span>
-                <h2 className="h-display mt-4 text-[clamp(26px,3.6vw,40px)]">Your customers &amp; data, handled with care</h2>
-                <p className="mt-4 text-[15.5px] text-muted">We treat your customer data and brand reputation as our own — strict confidentiality, secure access and clear accountability from day one.</p>
+                <h2 className="h-display mt-4 text-[clamp(26px,3.6vw,40px)]">Your customers and data, handled with care</h2>
+                <p className="mt-4 text-[15.5px] text-muted">Your support team works inside your systems and interacts directly with your customers. We treat that access with the confidentiality, accountability and operational discipline it requires.</p>
               </div>
               <div className="grid gap-3.5 sm:grid-cols-2">
                 {SECURITY.map((s) => (
