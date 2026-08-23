@@ -2,7 +2,7 @@ import Link from "next/link";
 import { SITE } from "@/lib/data";
 
 const COLS = [
-  { h: "Services", links: [["Live Chat", "/services"], ["Phone Support", "/services"], ["Email Support", "/services"], ["Shopify & eCommerce Support", "/services"], ["Technical Support", "/services"], ["Virtual Receptionist", "/services"], ["AI Automations", "/services"]] },
+  { h: "Services", links: [["Live Chat", "/services"], ["Phone Support", "/services"], ["Email Support", "/services"], ["Technical Support", "/services"], ["Shopify DTC Support", "/services"], ["VA Receptionist", "/services"], ["AI Automations", "/services"]] },
   { h: "Company", links: [["Why OptiFlow", "/why-optiflow"], ["How It Works", "/how-it-works"], ["About", "/about"]] },
   { h: "More", links: [["Pricing", "/pricing"], ["Careers", "/careers"], ["Contact", "/contact"]] },
 ];

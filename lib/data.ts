@@ -19,38 +19,38 @@ export const NAV = [
 export const SERVICES = [
   {
     icon: "MessageSquare", env: "chat", title: "Live Chat",
-    desc: "Fast, thoughtful conversations that help customers get answers without feeling like they're talking to a support script. Our agents work inside your helpdesk, learn your brand voice and handle everyday questions, troubleshooting and escalations.",
+    desc: "Fast, thoughtful conversations for customers who expect answers without the wait. Our agents handle questions, order support, troubleshooting and escalations while staying true to your brand voice.",
     tags: ["Gorgias", "Zendesk", "Intercom"],
   },
   {
     icon: "Headphones", env: "phone", title: "Phone Support",
-    desc: "A reliable voice on the line when your customers need one. We handle inbound calls, outbound follow-ups, escalations and customer conversations with the tone and professionalism your brand expects.",
+    desc: "Give customers a real person when the conversation matters most. Our trained agents handle inbound and outbound calls with clear communication, professional escalation and a customer-first approach.",
     tags: ["Inbound", "Outbound", "Escalations"],
   },
   {
     icon: "Mail", env: "email", title: "Email Support",
-    desc: "Clear, well-written responses that solve the issue instead of creating another ticket. We manage customer emails, follow your SOPs and maintain consistent tone, documentation and response standards.",
+    desc: "Clear, well-written responses that solve the issue instead of creating another ticket. We manage customer emails with consistent tone, accurate information, organized workflows and dependable follow-through.",
     tags: ["Freshdesk", "Help Scout", "Re:amaze"],
   },
   {
     icon: "Wrench", env: "tech", title: "Technical Support",
-    desc: "Technical products need more than scripted answers. Our support teams can handle troubleshooting, diagnostics, product questions and structured escalations — helping customers reach a resolution faster.",
+    desc: "When customers run into technical problems, they need more than a scripted response. Our support teams troubleshoot issues, follow documented processes and escalate complex cases when specialist attention is required.",
     tags: ["Tier 1", "Tier 2", "Diagnostics"],
   },
   {
-    icon: "ShoppingBag", env: "shopify", title: "Shopify & eCommerce Support",
-    desc: "Give your storefront the support team it deserves. We handle order questions, returns, exchanges, subscriptions, product enquiries and pre-sale conversations across your customer journey.",
+    icon: "ShoppingBag", env: "shopify", title: "Shopify DTC Support",
+    desc: "Customer support built around the pace of direct-to-consumer commerce. From order questions and WISMO requests to returns, exchanges, subscriptions and pre-sale conversations, our agents help keep the customer journey moving.",
     tags: ["Shopify", "Recharge", "Klaviyo"],
   },
   {
-    icon: "PhoneCall", env: "receptionist", title: "Virtual Receptionist",
-    desc: "A professional first point of contact for your business. We answer calls, qualify enquiries, schedule appointments, route messages and make sure important conversations never disappear into voicemail.",
+    icon: "PhoneCall", env: "receptionist", title: "VA Receptionist",
+    desc: "A professional first point of contact for your business. Our virtual receptionists can answer calls, capture messages, schedule appointments, route inquiries and help customers reach the right person without unnecessary friction.",
     tags: ["Live Answer", "Scheduling", "Routing"],
   },
   {
     icon: "Sparkles", env: "ai", title: "AI Automations",
-    desc: "Automate the repetitive work around your support operation. We build workflows that draft responses, triage requests, update systems and move routine tasks forward — while your team focuses on customers.",
-    tags: ["Automation", "Triage", "Workflows"],
+    desc: "Use automation where it makes sense — from ticket triage and information routing to repetitive operational workflows. We help reduce manual work while keeping people involved where judgment and customer care matter.",
+    tags: ["Workflow Automation", "AI Assistance", "Operations"],
   },
 ];
 
