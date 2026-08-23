@@ -32,7 +32,7 @@ export default function PageShell({
       </section>
 
       {cta && (
-        <section className="relative z-[2] pb-32 text-center">
+        <section className="on-light relative z-[2] py-32 text-center">
           <div className="shell">
             <Reveal>
               <div className="glass mx-auto max-w-3xl p-12">

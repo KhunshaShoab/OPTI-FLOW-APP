@@ -88,9 +88,9 @@ export const SECURITY = [
 ];
 
 export const TESTIMONIALS = [
-  { quote: "They didn't just answer tickets — they learned our product and protected our ratings like it was their own business.", who: "Client Brand", role: "Replace with a real quote", av: "CB" },
-  { quote: "Response times dropped and our customers noticed. It felt like scaling our own team, overnight.", who: "DTC Brand", role: "Replace with a real quote", av: "DT" },
-  { quote: "Coachable, fast and genuinely invested. The pilot made the decision easy.", who: "Shopify DTC Brand", role: "Replace with a real quote", av: "SD" },
+  { quote: "They didn't just answer tickets — they learned our product and protected our ratings like it was their own business.", who: "Client Brand", role: "", av: "CB" },
+  { quote: "Response times dropped and our customers noticed. It felt like scaling our own team, overnight.", who: "DTC Brand", role: "", av: "DT" },
+  { quote: "Coachable, fast and genuinely invested. The pilot made the decision easy.", who: "Shopify DTC Brand", role: "", av: "SD" },
 ];
 
 // Rough equirectangular coords (x,y in 0..1) for the contact routes map.
