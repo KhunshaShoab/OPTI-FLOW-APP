@@ -3,6 +3,7 @@ import { Inter, Sora, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/data";
 import SmoothScroll from "@/components/providers/SmoothScroll";
+import ChunkErrorReloader from "@/components/providers/ChunkErrorReloader";
 import IntroSequence from "@/components/home/IntroSequence";
 import CustomCursor from "@/components/ui/CustomCursor";
 import Background from "@/components/ui/Background";
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${inter.variable} ${sora.variable} ${space.variable}`}>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <ChunkErrorReloader />
         <Background />
         <CustomCursor />
         <IntroSequence />
