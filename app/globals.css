@@ -92,13 +92,13 @@ html.lenis, html.lenis body { height: auto; }
 .on-light .eyebrow { color: #2563EB; }
 .on-light .eyebrow::before { background: linear-gradient(90deg, #2563EB, #0EA5E9); }
 
-/* Cards on light sections: BLUE outer, white text */
+/* Cards on light sections: dark navy (same as site bg), white text */
 .on-light .glass {
-  background: linear-gradient(160deg, #1D4ED8 0%, #2563EB 55%, #1E3A8A 100%);
+  background: linear-gradient(160deg, #0A1633 0%, #14224D 55%, #0D1E45 100%);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  border: 1px solid rgba(59,130,246,.4);
-  box-shadow: 0 14px 40px -14px rgba(29,78,216,.45);
+  border: 1px solid rgba(59,130,246,.25);
+  box-shadow: 0 14px 40px -14px rgba(10,22,51,.55);
   border-radius: 20px;
   color: #FFFFFF;
 }
