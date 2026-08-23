@@ -11,7 +11,7 @@ export default function Process() {
   const inView = useInView(ref, { once: true, margin: "-25%" });
 
   return (
-    <section id="process" className="relative z-[2] py-28">
+    <section id="process" className="on-light relative z-[2] py-28">
       <div className="shell">
         <SectionHead kicker="How it works" title="A futuristic production line" sub="From first call to a support team that feels like your own — live in days, not months." />
         <div ref={ref} className="relative mt-4">

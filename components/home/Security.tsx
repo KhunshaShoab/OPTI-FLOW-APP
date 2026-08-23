@@ -38,7 +38,7 @@ export default function Security() {
   }, []);
 
   return (
-    <section className="relative z-[2] py-16">
+    <section className="on-light relative z-[2] py-16">
       <div className="shell">
         <Reveal>
           <div className="glass relative overflow-hidden">

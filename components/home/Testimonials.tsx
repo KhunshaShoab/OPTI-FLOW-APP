@@ -17,7 +17,7 @@ export default function Testimonials() {
               <p className="text-[15px] leading-relaxed text-[#e7eaf4]">“{t.quote}”</p>
               <div className="mt-6 flex items-center gap-3">
                 <span className="grid h-11 w-11 place-items-center rounded-full font-display font-bold text-white" style={{ background: "linear-gradient(140deg,#0EA5E9,#3B82F6)" }}>{t.av}</span>
-                <div><b className="block font-grotesk text-sm">{t.who}</b><span className="text-[12.5px] text-faint">{t.role}</span></div>
+                <div><b className="block font-grotesk text-sm">{t.who}</b>{t.role && <span className="text-[12.5px] text-faint">{t.role}</span>}</div>
               </div>
             </div>
           ))}
