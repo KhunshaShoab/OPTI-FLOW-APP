@@ -63,11 +63,11 @@ export const FEATURES = [
 ];
 
 export const INDUSTRIES = [
-  { icon: "ShoppingBag", name: "Shopify DTC", info: "Order status, exchanges, subscriptions and pre-sale conversion for DTC brands." },
-  { icon: "ShoppingCart", name: "eCommerce", info: "Order status, WISMO, exchanges, pre-sale conversion." },
-  { icon: "Cloud", name: "SaaS", info: "Onboarding, billing, retention and tier-1 troubleshooting." },
-  { icon: "Cpu", name: "Hardware", info: "Setup, firmware, warranty and technical diagnostics." },
-  { icon: "Repeat", name: "Subscriptions", info: "Billing, churn-saves and membership support." },
+  { icon: "ShoppingBag", name: "Shopify DTC", info: "WISMO, returns, exchanges, subscriptions and pre-sale support for direct-to-consumer brands." },
+  { icon: "ShoppingCart", name: "eCommerce", info: "Multi-channel customer support across orders, returns, delivery and retention." },
+  { icon: "Cloud", name: "SaaS", info: "Product questions, onboarding, account issues and customer retention conversations." },
+  { icon: "Cpu", name: "Hardware", info: "Technical troubleshooting, product guidance and post-purchase support." },
+  { icon: "Repeat", name: "Subscriptions", info: "Billing questions, cancellations, renewals and retention-focused support." },
 ];
 
 export const PROCESS = [
