@@ -25,7 +25,7 @@ export default function Hero() {
   };
 
   return (
-    <header className="relative flex min-h-[100svh] items-center justify-center overflow-hidden text-center" style={{ background: "radial-gradient(120% 90% at 50% 45%, #F5FAFF 0%, #EAF4FF 60%, #E5F7F0 100%)" }}>
+    <header className="relative flex min-h-[100svh] items-center justify-center overflow-hidden text-center" style={{ background: "radial-gradient(120% 90% at 50% 45%, #0a0f22 0%, #050816 60%, #030409 100%)" }}>
       {is3D && (
         <div className="pointer-events-none absolute inset-0 z-0">
           <Canvas camera={{ position: [0, 0, 9], fov: 50 }} dpr={[1, 1.6]} gl={{ antialias: true, alpha: true }}>
@@ -34,10 +34,10 @@ export default function Hero() {
         </div>
       )}
 
-      {/* readability: soft light veil + a focused white pool behind the headline
-          so moving objects never compete with the type */}
-      <div className="pointer-events-none absolute inset-0 z-[1]" style={{ background: "radial-gradient(65% 55% at 50% 50%, rgba(255,255,255,.45), rgba(245,250,255,.82) 100%)" }} />
-      <div className="pointer-events-none absolute left-1/2 top-1/2 z-[1] h-[46vh] w-[70vw] max-w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-[50%] blur-[60px]" style={{ background: "radial-gradient(closest-side, rgba(255,255,255,.9), transparent)" }} />
+      {/* readability: global veil + a soft focused pool behind the headline so
+          moving objects never compete with the type */}
+      <div className="pointer-events-none absolute inset-0 z-[1]" style={{ background: "radial-gradient(65% 55% at 50% 50%, rgba(5,8,22,.45), rgba(5,8,22,.82) 100%)" }} />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 z-[1] h-[46vh] w-[70vw] max-w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-[50%] blur-[60px]" style={{ background: "radial-gradient(closest-side, rgba(5,8,22,.78), transparent)" }} />
 
       <div className="relative z-[3] shell px-6 py-32">
         <motion.span variants={rise} initial="hidden" animate="show" custom={0} className="eyebrow justify-center">
@@ -65,10 +65,10 @@ export default function Hero() {
       <div className="absolute bottom-6 left-1/2 z-[4] -translate-x-1/2 font-grotesk text-[11px] uppercase tracking-[0.22em] text-faint">Scroll to explore</div>
 
       <style>{`
-        .hero-title{ color: #0F1F3F; text-shadow: 0 0 34px rgba(37,99,235,.06); animation: heroGlow 7s ease-in-out infinite; }
+        .hero-title{ text-shadow: 0 0 34px rgba(59,130,246,.10); animation: heroGlow 7s ease-in-out infinite; }
         @keyframes heroGlow{
-          0%,100%{ text-shadow: 0 2px 40px rgba(37,99,235,.10), 0 0 2px rgba(6,182,212,.06); }
-          50%{ text-shadow: 0 2px 54px rgba(6,182,212,.14), 0 0 3px rgba(16,185,129,.10); }
+          0%,100%{ text-shadow: 0 2px 40px rgba(59,130,246,.12), 0 0 2px rgba(255,255,255,.10); }
+          50%{ text-shadow: 0 2px 54px rgba(14,165,233,.16), 0 0 3px rgba(255,255,255,.14); }
         }
         @media (prefers-reduced-motion: reduce){ .hero-title{ animation: none; } }
       `}</style>
