@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
 // customer operations." Replaces the old galaxy/aurora background.
 type Glyph = { x: number; y: number; vx: number; vy: number; r: number; k: number; c: string; ph: number };
 
-const COLORS = ["59,130,246", "96,165,250", "14,165,233", "110,86,240"];
+const COLORS = ["37,99,235", "96,165,250", "6,182,212", "16,185,129"];
 
 export default function Background() {
   const canvas = useRef<HTMLCanvasElement>(null);
@@ -35,7 +35,7 @@ export default function Background() {
     };
 
     const glyph = (it: Glyph) => {
-      const a = 0.06 + Math.sin(t * 0.02 + it.ph) * 0.02;
+      const a = 0.09 + Math.sin(t * 0.02 + it.ph) * 0.03;
       g.strokeStyle = `rgba(${it.c},${a})`;
       g.fillStyle = `rgba(${it.c},${a})`;
       g.lineWidth = 1.2;
@@ -65,7 +65,7 @@ export default function Background() {
       }
       for (let i = 0; i < items.length; i++) for (let j = i + 1; j < items.length; j++) {
         const a = items[i], b = items[j], d = Math.hypot(a.x - b.x, a.y - b.y);
-        if (d < 150) { g.strokeStyle = `rgba(120,140,180,${0.05 * (1 - d / 150)})`; g.lineWidth = 1; g.beginPath(); g.moveTo(a.x, a.y); g.lineTo(b.x, b.y); g.stroke(); }
+        if (d < 150) { g.strokeStyle = `rgba(37,99,235,${0.06 * (1 - d / 150)})`; g.lineWidth = 1; g.beginPath(); g.moveTo(a.x, a.y); g.lineTo(b.x, b.y); g.stroke(); }
       }
       items.forEach(glyph);
       if (!reduce) raf = requestAnimationFrame(draw);
@@ -79,9 +79,9 @@ export default function Background() {
 
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-      {/* deep operations-console base, not a nebula */}
-      <div className="absolute inset-0" style={{ background: "radial-gradient(120% 80% at 50% -10%, #10162e 0%, #0b1e3f 55%, #070810 100%)" }} />
-      <div className="noise-mask absolute inset-0 opacity-40" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px)", backgroundSize: "72px 72px" }} />
+      {/* soft light operations-console base */}
+      <div className="absolute inset-0" style={{ background: "radial-gradient(120% 80% at 50% -10%, rgba(6,182,212,.10) 0%, rgba(37,99,235,.06) 55%, transparent 100%)" }} />
+      <div className="noise-mask absolute inset-0 opacity-60" style={{ backgroundImage: "linear-gradient(rgba(37,99,235,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,.05) 1px,transparent 1px)", backgroundSize: "72px 72px" }} />
       <canvas ref={canvas} className="absolute inset-0 h-full w-full" />
     </div>
   );

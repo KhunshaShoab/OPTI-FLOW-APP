@@ -6,7 +6,20 @@
   --font-sora: "Sora", sans-serif;
   --font-space: "Space Grotesk", sans-serif;
   --font-inter: "Inter", sans-serif;
-  color-scheme: dark;
+  color-scheme: light;
+  /* Theme tokens */
+  --surface: #F5FAFF;
+  --surface-soft: #FFFFFF;
+  --ink: #0F1F3F;
+  --ink-muted: #52627A;
+  --ink-faint: #94A3B8;
+  --line: #E5EAF2;
+  --line-strong: #CBD5E1;
+  --brand-blue: #2563EB;
+  --brand-blue-deep: #1D4ED8;
+  --brand-blue-light: #60A5FA;
+  --brand-cyan: #06B6D4;
+  --brand-mint: #10B981;
 }
 
 * { box-sizing: border-box; }
@@ -15,11 +28,15 @@ html { scroll-behavior: auto; } /* Lenis handles smoothness */
 
 body {
   margin: 0;
-  background: #0a1633;
-  color: #fff;
+  background:
+    radial-gradient(60% 40% at 12% 8%, rgba(6,182,212,.10), transparent 70%),
+    radial-gradient(55% 45% at 92% 12%, rgba(16,185,129,.08), transparent 70%),
+    linear-gradient(180deg, #EDF6FF 0%, #F5FAFF 45%, #E9FBF4 100%);
+  color: var(--ink);
   font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /* Lenis */
@@ -36,165 +53,105 @@ html.lenis, html.lenis body { height: auto; }
 @layer components {
   .shell { @apply mx-auto w-full max-w-shell px-6; }
   .eyebrow {
-    @apply inline-flex items-center gap-3 font-grotesk text-[12px] font-semibold uppercase tracking-[0.26em] text-cyan;
+    @apply inline-flex items-center gap-3 font-grotesk text-[12px] font-semibold uppercase tracking-[0.26em];
+    color: var(--brand-blue);
   }
-  .eyebrow::before { content: ""; @apply h-px w-6; background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+  .eyebrow::before { content: ""; @apply h-px w-6; background: linear-gradient(90deg, var(--brand-blue), var(--brand-cyan)); }
   .h-display { @apply font-display font-bold tracking-tightest; }
   .grad-text {
-    background: linear-gradient(100deg, #60a5fa, #3b82f6 55%, #0ea5e9);
+    background: linear-gradient(100deg, #2563EB 0%, #06B6D4 50%, #10B981 100%);
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
   .glass {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border: 1px solid rgba(255,255,255,0.09);
-    border-radius: 22px;
+    background: #FFFFFF;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    box-shadow: 0 6px 28px -12px rgba(15,31,63,.10);
   }
   .btn {
     @apply relative inline-flex items-center gap-2 overflow-hidden rounded-full border px-6 py-3.5 font-grotesk text-[14.5px] font-semibold;
-    border-color: rgba(255,255,255,0.16);
+    border-color: var(--line-strong);
     transition: transform .3s, box-shadow .3s, background .3s;
   }
   .btn-primary {
-    background: linear-gradient(100deg, #3b82f6, #1d4ed8);
+    background: linear-gradient(100deg, #2563EB, #1D4ED8);
     border-color: transparent; color: #fff;
-    box-shadow: 0 10px 34px -10px rgba(59,130,246,.7);
+    box-shadow: 0 10px 30px -10px rgba(37,99,235,.55);
   }
-  .btn-primary:hover { box-shadow: 0 16px 46px -8px rgba(14,165,233,.75); }
-  .btn-ghost { background: rgba(255,255,255,0.03); color: #fff; }
-  .btn-ghost:hover { background: rgba(255,255,255,0.09); }
+  .btn-primary:hover { box-shadow: 0 16px 42px -8px rgba(6,182,212,.55); }
+  .btn-ghost { background: #FFFFFF; color: var(--ink); border-color: var(--line-strong); }
+  .btn-ghost:hover { background: #F1F5F9; }
 }
 
 @layer utilities {
-  .glow-cyan { box-shadow: 0 0 40px -8px rgba(59,130,246,.55); }
-  .glow-mag { box-shadow: 0 0 40px -8px rgba(14,165,233,.55); }
+  .glow-cyan { box-shadow: 0 0 40px -8px rgba(37,99,235,.35); }
+  .glow-mag { box-shadow: 0 0 40px -8px rgba(6,182,212,.35); }
   .text-balance { text-wrap: balance; }
   .noise-mask { mask: radial-gradient(120% 90% at 50% 30%, #000 30%, transparent 78%); }
 }
 
-/* ----------  LIGHT SECTION (white bg with blue cards) ---------- */
-.on-light {
-  background: #F8FAFC;
-  color: #0F172A;
-  position: relative;
-}
-.on-light h1, .on-light h2, .on-light h3, .on-light h4, .on-light h5 { color: #0F172A; }
-.on-light .text-muted { color: #475569 !important; }
-.on-light .text-faint { color: #64748B !important; }
-.on-light .text-white { color: #0F172A !important; }
-.on-light .border-line { border-color: #E2E8F0 !important; }
-.on-light .border-line2 { border-color: #CBD5E1 !important; }
-.on-light .grad-text {
-  background: linear-gradient(100deg, #3B82F6, #1D4ED8 55%, #0EA5E9);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
-.on-light .eyebrow { color: #2563EB; }
-.on-light .eyebrow::before { background: linear-gradient(90deg, #2563EB, #0EA5E9); }
+/* --------------------------------------------------------------
+   GLOBAL LIGHT-THEME OVERRIDES
+   The site was originally built for a dark theme (text-white,
+   text-muted, border-line rgba-white values, etc.). These rules
+   remap those utilities to the light theme so existing components
+   render correctly without touching every file.
+   -------------------------------------------------------------- */
+.text-muted { color: var(--ink-muted) !important; }
+.text-faint { color: var(--ink-faint) !important; }
+.text-white { color: var(--ink) !important; }
+.text-cyan { color: var(--brand-blue) !important; }
+.text-teal { color: var(--brand-cyan) !important; }
+.text-mag { color: var(--brand-mint) !important; }
+.border-line { border-color: var(--line) !important; }
+.border-line2 { border-color: var(--line-strong) !important; }
+.bg-glass { background: #FFFFFF !important; }
+.bg-bg { background: var(--surface) !important; }
+.bg-bg2 { background: var(--surface-soft) !important; }
+.bg-bg3 { background: var(--surface) !important; }
 
-/* Cards on light sections: dark navy (same as site bg), white text */
-.on-light .glass {
-  background: linear-gradient(160deg, #0A1633 0%, #14224D 55%, #0D1E45 100%);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  border: 1px solid rgba(59,130,246,.25);
-  box-shadow: 0 14px 40px -14px rgba(10,22,51,.55);
-  border-radius: 20px;
-  color: #FFFFFF;
-}
-.on-light .glass h1,
-.on-light .glass h2,
-.on-light .glass h3,
-.on-light .glass h4,
-.on-light .glass h5 { color: #FFFFFF; }
-.on-light .glass p,
-.on-light .glass .text-muted { color: #DBEAFE !important; }
-.on-light .glass .text-faint { color: #93C5FD !important; }
-.on-light .glass .text-cyan,
-.on-light .glass .text-teal { color: #93C5FD !important; }
-.on-light .glass .border-line { border-color: rgba(255,255,255,0.18) !important; }
-.on-light .glass .border-line2 { border-color: rgba(255,255,255,0.28) !important; }
-.on-light .glass .grad-text {
-  background: linear-gradient(100deg, #FFFFFF, #93C5FD 60%, #FFFFFF);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
+/* Cards should read on the light bg */
+.glass .text-white { color: var(--ink) !important; }
 
-/* Inner "screen" preview inside blue cards: WHITE background */
-.on-light .env-wrap {
-  background: linear-gradient(160deg, #FFFFFF, #F1F5F9) !important;
+/* Small dark "screen" panels inside cards (Services envs) become soft light
+   panels so their inner animations still read but on the light theme. */
+.env-wrap {
+  background: linear-gradient(160deg, #F0F6FF, #E6F3FF) !important;
   border: 1px solid #DBEAFE !important;
 }
-.on-light .env .tag { color: #64748B !important; }
-.on-light .env .folder { color: #1D4ED8 !important; }
-.on-light .env .bub { background: #E2E8F0 !important; color: #0F172A !important; }
-.on-light .env .bub.right { background: rgba(59,130,246,.2) !important; color: #1E3A8A !important; }
-.on-light .env .badge { background: #1D4ED8 !important; color: #FFFFFF !important; }
-.on-light .env .chip { border-color: rgba(29,78,216,.55) !important; box-shadow: 0 0 18px -6px #1d4ed8 !important; }
-.on-light .env .chip span { background: #1D4ED8 !important; }
-.on-light .env .arrow { color: #1D4ED8 !important; }
-.on-light .env .ai-node {
-  background: rgba(59,130,246,.1) !important;
-  border-color: rgba(29,78,216,.5) !important;
+.env .tag { color: #64748B !important; }
+.env .folder { color: var(--brand-blue) !important; }
+.env .bub { background: #E2E8F0 !important; color: #0F1F3F !important; }
+.env .bub.right { background: rgba(37,99,235,.18) !important; color: #1E3A8A !important; }
+.env .badge { background: var(--brand-cyan) !important; color: #FFFFFF !important; }
+.env .chip { border-color: rgba(37,99,235,.5) !important; box-shadow: 0 0 18px -6px rgba(37,99,235,.55) !important; }
+.env .chip span { background: var(--brand-blue) !important; }
+.env .arrow { color: var(--brand-cyan) !important; }
+.env .ai-node {
+  background: rgba(37,99,235,.1) !important;
+  border-color: rgba(37,99,235,.5) !important;
   color: #1E3A8A !important;
-  box-shadow: 0 0 12px -4px rgba(59,130,246,.5) !important;
+  box-shadow: 0 0 14px -4px rgba(37,99,235,.5) !important;
 }
+.env .bar { background: linear-gradient(180deg,#2563EB,#06B6D4) !important; }
+.env .wave { background: linear-gradient(#2563EB,#06B6D4) !important; }
 
-.on-light .btn-ghost {
-  background: #FFFFFF; color: #0F172A;
-  border: 1px solid #CBD5E1;
-}
-.on-light .btn-ghost:hover { background: #F1F5F9; }
+/* Testimonials — the marquee cards use a dark colour in-line */
+.text-\[\#e7eaf4\] { color: var(--ink) !important; }
+.text-\[\#dfe3f0\] { color: var(--ink-muted) !important; }
 
-/* ---------- SERVICES PAGE — white cards, deep navy visual panels ---------- */
-.services-page .on-light .glass {
-  background: #FFFFFF;
-  color: #0F172A;
-  border: 1px solid #E5EAF2;
-  box-shadow: 0 6px 28px -14px rgba(15,23,42,.12);
-}
-.services-page .on-light .glass h1,
-.services-page .on-light .glass h2,
-.services-page .on-light .glass h3,
-.services-page .on-light .glass h4,
-.services-page .on-light .glass h5 { color: #0F172A; }
-.services-page .on-light .glass p,
-.services-page .on-light .glass .text-muted { color: #52627A !important; }
-.services-page .on-light .glass .text-faint { color: #64748B !important; }
-.services-page .on-light .glass .text-cyan,
-.services-page .on-light .glass .text-teal { color: #2563EB !important; }
-.services-page .on-light .glass .border-line { border-color: #E5EAF2 !important; }
-.services-page .on-light .glass .border-line2 { border-color: #CBD5E1 !important; }
-.services-page .on-light .glass .grad-text {
-  background: linear-gradient(100deg, #2563EB, #1D4ED8 55%, #0EA5E9);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
+/* The on-light class becomes a no-op (site is already light).
+   Legacy blocks that used it as a "flip to light" wrapper still work. */
+.on-light { background: transparent; }
 
-/* Inner "screen" preview inside white cards: deep navy panel */
-.services-page .on-light .env-wrap {
-  background: linear-gradient(160deg, #08142F, #0B1B41) !important;
-  border: 1px solid rgba(11,27,65,.35) !important;
-}
-.services-page .on-light .env .tag { color: #B7C4DE !important; }
-.services-page .on-light .env .folder { color: #60A5FA !important; }
-.services-page .on-light .env .bub { background: rgba(255,255,255,.08) !important; color: #F8FAFC !important; }
-.services-page .on-light .env .bub.right { background: rgba(59,130,246,.28) !important; color: #FFFFFF !important; }
-.services-page .on-light .env .badge { background: #3B82F6 !important; color: #FFFFFF !important; }
-.services-page .on-light .env .chip { border-color: rgba(59,130,246,.55) !important; box-shadow: 0 0 18px -6px rgba(59,130,246,.6) !important; }
-.services-page .on-light .env .chip span { background: #3B82F6 !important; }
-.services-page .on-light .env .arrow { color: #60A5FA !important; }
-.services-page .on-light .env .ai-node {
-  background: rgba(59,130,246,.14) !important;
-  border-color: rgba(59,130,246,.55) !important;
-  color: #DBEAFE !important;
-  box-shadow: 0 0 14px -4px rgba(59,130,246,.6) !important;
-}
-.services-page .on-light .env .bar { background: linear-gradient(180deg,#3B82F6,#60A5FA) !important; }
-.services-page .on-light .env .mail { filter: none; }
-.services-page .on-light .env .pkg { filter: none; }
-.services-page .on-light .env .wave { background: linear-gradient(#3B82F6,#60A5FA) !important; }
+/* Restore the visualisation-hero "dark screen" look inside the SVG hero
+   panels so their glow effects still read. They are painted on-canvas so
+   nothing to override. */
 
 /* accessible focus */
-:focus-visible { outline: 2px solid #3b82f6; outline-offset: 3px; border-radius: 6px; }
+:focus-visible { outline: 2px solid var(--brand-blue); outline-offset: 3px; border-radius: 6px; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
