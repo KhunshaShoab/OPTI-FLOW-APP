@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="OptiFlow CX">
+  <defs>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="55%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#0F2145" />
+      <stop offset="100%" stop-color="#0A1633" />
+    </radialGradient>
+  </defs>
+
+  <!-- outer ring -->
+  <circle cx="64" cy="64" r="60" fill="url(#core)" stroke="url(#ring)" stroke-width="4" />
+
+  <!-- OptiFlow "O" mark -->
+  <g transform="translate(64 64)">
+    <circle r="26" fill="none" stroke="#FFFFFF" stroke-width="7" />
+    <!-- notch to open the O to the right -->
+    <path d="M 0 -33 L 16 -33 L 16 33 L 0 33 Z" fill="url(#core)" />
+    <!-- flowing wing/swoosh -->
+    <path
+      d="M 6 -8 C 22 -18 34 -10 30 8 C 26 18 14 22 4 18 C 0 16 -2 12 0 8 C 4 -2 12 -6 6 -8 Z"
+      fill="url(#wing)"
+    />
+    <path
+      d="M 10 6 C 22 2 30 10 26 22 C 20 30 10 30 4 26 C 0 22 2 14 10 6 Z"
+      fill="url(#wing)"
+      opacity="0.85"
+    />
+  </g>
+</svg>

@@ -80,8 +80,21 @@ export default function ContactMap() {
             <h2 className="h-display mt-4 text-[clamp(28px,4vw,44px)]">Let's optimize your customer experience.</h2>
             <p className="mt-4 text-[15.5px] text-muted">Tell us what you're handling today — your channels, volume, coverage needs and biggest operational bottleneck. We'll show you where OptiFlow can fit.</p>
             <ul className="mt-8 space-y-4">
-              <li className="flex items-center gap-3 text-[15px] text-[#dfe3f0]"><span className="grid h-10 w-10 flex-none place-items-center rounded-xl border border-line bg-glass">✉️</span> {SITE.email}</li>
-              <li className="flex items-center gap-3 text-[15px] text-[#dfe3f0]"><span className="grid h-10 w-10 flex-none animate-pulseGlow place-items-center rounded-xl text-white" style={{ background: "linear-gradient(140deg,#25D366,#128C7E)" }}>💬</span> WhatsApp: {SITE.whatsapp}</li>
+              <li>
+                <a href={`mailto:${SITE.email}`} className="flex items-center gap-3 text-[15px] text-[#dfe3f0] transition hover:text-white">
+                  <span className="grid h-10 w-10 flex-none place-items-center rounded-xl border border-line bg-glass">✉️</span> {SITE.email}
+                </a>
+              </li>
+              <li>
+                <a href={`tel:${SITE.phone}`} className="flex items-center gap-3 text-[15px] text-[#dfe3f0] transition hover:text-white">
+                  <span className="grid h-10 w-10 flex-none place-items-center rounded-xl border border-line bg-glass">📞</span> {SITE.phoneDisplay}
+                </a>
+              </li>
+              <li>
+                <a href={SITE.whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[15px] text-[#dfe3f0] transition hover:text-white">
+                  <span className="grid h-10 w-10 flex-none animate-pulseGlow place-items-center rounded-xl text-white" style={{ background: "linear-gradient(140deg,#25D366,#128C7E)" }}>💬</span> WhatsApp: {SITE.phoneDisplay}
+                </a>
+              </li>
               <li className="flex items-center gap-3 text-[15px] text-[#dfe3f0]"><span className="grid h-10 w-10 flex-none place-items-center rounded-xl border border-line bg-glass">📍</span> {SITE.location} · Serving global brands</li>
               <li className="flex items-center gap-3 text-[15px] text-[#dfe3f0]"><span className="grid h-10 w-10 flex-none place-items-center rounded-xl border border-line bg-glass">🕑</span> Coverage across multiple time zones</li>
             </ul>
