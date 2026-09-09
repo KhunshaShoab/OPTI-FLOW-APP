@@ -27,7 +27,7 @@ export default function Navbar() {
       >
         <Link href="/" className="flex items-center gap-3 font-grotesk font-semibold">
           <span className="relative h-10 w-10 flex-none overflow-hidden rounded-full ring-1 ring-white/10">
-            <Image src="/logo.svg" alt="OptiFlow CX" fill sizes="40px" priority className="object-cover" />
+            <Image src="/logo.png" alt="OptiFlow CX" fill sizes="40px" priority className="object-cover" />
           </span>
           <span>
             OptiFlow<span className="font-normal text-faint"> CX</span>
