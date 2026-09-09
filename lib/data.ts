@@ -1,11 +1,14 @@
 export const SITE = {
   name: "OptiFlow Solutions",
   tagline: "Operations, Optimized.",
-  email: "hello@optiflowsolutions.com",
-  whatsapp: "+92 3XX XXXXXXX",
+  email: "info@optiflowcx.com",
+  phone: "+923058910960",
+  phoneDisplay: "+92 305 8910960",
+  whatsapp: "+923058910960",
+  whatsappLink: "https://wa.me/923058910960",
   location: "Lahore, Pakistan",
   markets: ["United States", "United Kingdom", "Europe", "Australia", "Middle East"],
-  url: "https://optiflowsolutions.com",
+  url: "https://optiflowcx.com",
 };
 
 export const NAV = [

@@ -1,10 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SITE } from "@/lib/data";
 
 const COLS = [
   { h: "Services", links: [["Live Chat", "/services"], ["Phone Support", "/services"], ["Email Support", "/services"], ["Technical Support", "/services"], ["Shopify DTC Support", "/services"], ["VA Receptionist", "/services"], ["AI Automations", "/services"]] },
   { h: "Company", links: [["Why OptiFlow", "/why-optiflow"], ["How It Works", "/how-it-works"], ["About", "/about"]] },
-  { h: "More", links: [["Pricing", "/pricing"], ["Careers", "/careers"], ["Contact", "/contact"]] },
+  { h: "More", links: [["Careers", "/careers"], ["Contact", "/contact"]] },
 ];
 
 export default function Footer() {
@@ -15,18 +16,30 @@ export default function Footer() {
         <div className="grid gap-8 md:grid-cols-[1.6fr_1fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center gap-3 font-grotesk font-semibold">
-              <span className="relative h-7 w-7 flex-none animate-spinSlow rounded-[9px]" style={{ background: "conic-gradient(from 200deg,#0EA5E9,#3B82F6,#60A5FA,#0EA5E9)" }}>
-                <span className="absolute inset-1.5 rounded-[5px] bg-bg2" />
+              <span className="relative h-10 w-10 flex-none overflow-hidden rounded-full ring-1 ring-white/10">
+                <Image src="/logo.svg" alt="OptiFlow CX" fill sizes="40px" className="object-cover" />
               </span>
-              OptiFlow<span className="font-normal text-faint">Solutions</span>
+              <span>OptiFlow<span className="font-normal text-faint"> CX</span></span>
             </Link>
             <p className="mt-4 max-w-[280px] text-sm text-muted">Global, high-volume customer support for ambitious brands. {SITE.tagline}</p>
-            <p className="mt-3 text-sm text-faint">📍 {SITE.location} · Serving US · UK · EU · AU · ME</p>
-            <div className="mt-4 flex gap-2.5">
-              {["in", "✕", "f", "◎"].map((s, i) => (
-                <a key={i} href="/contact" className="grid h-9 w-9 place-items-center rounded-[10px] border border-line transition hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_18px_-4px_#3b82f6]">{s}</a>
-              ))}
-            </div>
+            <ul className="mt-4 space-y-2 text-sm">
+              <li>
+                <a href={`mailto:${SITE.email}`} className="inline-flex items-center gap-2 text-muted transition hover:text-white">
+                  <span className="text-cyan">✉</span> {SITE.email}
+                </a>
+              </li>
+              <li>
+                <a href={`tel:${SITE.phone}`} className="inline-flex items-center gap-2 text-muted transition hover:text-white">
+                  <span className="text-cyan">📞</span> {SITE.phoneDisplay}
+                </a>
+              </li>
+              <li>
+                <a href={SITE.whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-muted transition hover:text-white">
+                  <span className="text-teal">💬</span> WhatsApp
+                </a>
+              </li>
+              <li className="text-faint">📍 {SITE.location} · Serving US · UK · EU · AU · ME</li>
+            </ul>
           </div>
           {COLS.map((c) => (
             <div key={c.h}>
