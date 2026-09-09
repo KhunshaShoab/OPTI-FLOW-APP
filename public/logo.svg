@@ -1,37 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="OptiFlow CX">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="OptiFlow CX">
   <defs>
     <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#2563EB" />
-      <stop offset="55%" stop-color="#06B6D4" />
-      <stop offset="100%" stop-color="#10B981" />
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="55%" stop-color="#60A5FA" />
+      <stop offset="100%" stop-color="#93C5FD" />
     </linearGradient>
     <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#06B6D4" />
-      <stop offset="100%" stop-color="#10B981" />
+      <stop offset="0%" stop-color="#60A5FA" />
+      <stop offset="100%" stop-color="#2563EB" />
     </linearGradient>
-    <radialGradient id="core" cx="50%" cy="50%" r="55%">
+    <radialGradient id="core" cx="50%" cy="45%" r="65%">
       <stop offset="0%" stop-color="#0F2145" />
-      <stop offset="100%" stop-color="#0A1633" />
+      <stop offset="100%" stop-color="#020617" />
     </radialGradient>
   </defs>
 
-  <!-- outer ring -->
-  <circle cx="64" cy="64" r="60" fill="url(#core)" stroke="url(#ring)" stroke-width="4" />
+  <!-- outer disc + ring -->
+  <circle cx="256" cy="256" r="244" fill="url(#core)" stroke="url(#ring)" stroke-width="10" />
 
-  <!-- OptiFlow "O" mark -->
-  <g transform="translate(64 64)">
-    <circle r="26" fill="none" stroke="#FFFFFF" stroke-width="7" />
-    <!-- notch to open the O to the right -->
-    <path d="M 0 -33 L 16 -33 L 16 33 L 0 33 Z" fill="url(#core)" />
-    <!-- flowing wing/swoosh -->
+  <!-- O mark -->
+  <g transform="translate(256 208)">
+    <circle r="96" fill="none" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round" />
+    <!-- open the O to the right so the swoosh reads like it's flying out -->
+    <path d="M 30 -100 L 110 -100 L 110 100 L 30 100 Z" fill="url(#core)" />
+
+    <!-- upper wing -->
     <path
-      d="M 6 -8 C 22 -18 34 -10 30 8 C 26 18 14 22 4 18 C 0 16 -2 12 0 8 C 4 -2 12 -6 6 -8 Z"
+      d="M 20 -34
+         C 78 -60 128 -40 116 4
+         C 106 40 68 54 32 44
+         C 14 40 8 26 16 12
+         C 26 -8 42 -22 20 -34 Z"
       fill="url(#wing)"
     />
+    <!-- lower wing (slightly offset for the layered swoosh look) -->
     <path
-      d="M 10 6 C 22 2 30 10 26 22 C 20 30 10 30 4 26 C 0 22 2 14 10 6 Z"
+      d="M 34 20
+         C 90 8 130 30 118 74
+         C 100 106 62 108 30 96
+         C 8 86 14 60 34 20 Z"
       fill="url(#wing)"
       opacity="0.85"
     />
+  </g>
+
+  <!-- wordmark: OptiFlow (white) + CX (blue) -->
+  <g transform="translate(256 372)" text-anchor="middle" font-family="'Sora','Space Grotesk',system-ui,sans-serif" font-weight="700">
+    <text x="-12" y="0" fill="#FFFFFF" font-size="56" letter-spacing="-1">OptiFlow</text>
+    <text x="152" y="0" fill="#3B82F6" font-size="56" letter-spacing="-1">CX</text>
+  </g>
+
+  <!-- underline with center dot -->
+  <g transform="translate(256 400)">
+    <line x1="-96" y1="0" x2="-8" y2="0" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" />
+    <line x1="8" y1="0" x2="96" y2="0" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" />
+    <circle cx="0" cy="0" r="3" fill="#3B82F6" />
   </g>
 </svg>
