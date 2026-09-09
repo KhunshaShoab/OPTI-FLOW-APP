@@ -101,15 +101,44 @@ export default function ContactMap() {
           </Reveal>
 
           <Reveal delay={0.12}>
-            <form className="glass p-8" onSubmit={(e) => { e.preventDefault(); (e.currentTarget.querySelector("[type=submit] span") as HTMLElement).textContent = "Thank you — we'll be in touch"; }}>
+            <form
+              className="glass p-8"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const form = e.currentTarget;
+                const data = new FormData(form);
+                const name = String(data.get("name") || "").trim();
+                const company = String(data.get("company") || "").trim();
+                const email = String(data.get("email") || "").trim();
+                const volume = String(data.get("volume") || "").trim();
+                const message = String(data.get("message") || "").trim();
+
+                const subject = `Consultation request — ${company || name || "OptiFlow website"}`;
+                const body = [
+                  `Name: ${name}`,
+                  `Company: ${company}`,
+                  `Work email: ${email}`,
+                  `Monthly support volume: ${volume}`,
+                  "",
+                  "Message:",
+                  message,
+                ].join("\n");
+
+                const mailto = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.location.href = mailto;
+
+                const label = form.querySelector("[type=submit] span") as HTMLElement | null;
+                if (label) label.textContent = "Opening your email…";
+              }}
+            >
               <div className="grid gap-3.5 sm:grid-cols-2">
-                <Field label="Full name"><input required placeholder="Your name" className="fld" /></Field>
-                <Field label="Company"><input placeholder="Company name" className="fld" /></Field>
+                <Field label="Full name"><input name="name" required placeholder="Your name" className="fld" /></Field>
+                <Field label="Company"><input name="company" placeholder="Company name" className="fld" /></Field>
               </div>
               <div className="mt-4 grid gap-3.5 sm:grid-cols-2">
-                <Field label="Work email"><input required type="email" placeholder="you@company.com" className="fld" /></Field>
+                <Field label="Work email"><input name="email" required type="email" placeholder="you@company.com" className="fld" /></Field>
                 <Field label="Monthly support volume">
-                  <select className="fld" defaultValue="">
+                  <select name="volume" className="fld" defaultValue="">
                     <option value="" disabled>Select a range</option>
                     <option>Under 1,000</option>
                     <option>1,000 – 5,000</option>
@@ -119,9 +148,8 @@ export default function ContactMap() {
                   </select>
                 </Field>
               </div>
-              <Field label="How can we help?" className="mt-4"><textarea placeholder="Tell us about your current support setup, channels and goals…" className="fld min-h-[110px] resize-y" /></Field>
+              <Field label="How can we help?" className="mt-4"><textarea name="message" placeholder="Tell us about your current support setup, channels and goals…" className="fld min-h-[110px] resize-y" /></Field>
               <button type="submit" className="btn btn-primary mt-5 w-full justify-center"><span className="relative z-[2]">Request a consultation</span></button>
-              <p className="mt-2.5 text-xs text-faint">Demo form — connect to Formspree / HubSpot to receive submissions, and embed your Calendly on the “Book a call” buttons.</p>
               <style>{`.fld{width:100%;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:12px 14px;color:#fff;font-size:14.5px;font-family:var(--font-inter);transition:.25s}.fld:focus{outline:none;border-color:#3b82f6;background:rgba(255,255,255,.05);box-shadow:0 0 0 3px rgba(59,130,246,.14)}`}</style>
             </form>
           </Reveal>
