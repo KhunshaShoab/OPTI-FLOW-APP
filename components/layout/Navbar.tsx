@@ -30,7 +30,7 @@ export default function Navbar() {
             <Image src="/logo.png" alt="OptiFlow CX" fill sizes="40px" priority className="object-cover" />
           </span>
           <span>
-            OptiFlow<span className="font-normal text-faint">CX</span>
+            OptiFlow<span className="font-normal text-faint"> CX</span>
           </span>
         </Link>
 

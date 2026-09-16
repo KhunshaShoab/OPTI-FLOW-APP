@@ -3,9 +3,9 @@ import Image from "next/image";
 import { SITE } from "@/lib/data";
 
 const COLS = [
-  { h: "Services", links: [["Customer Support", "/services"], ["E-Commerce CX", "/services"], ["Pre-Sales", "/services"], ["Technical Support", "/services"], ["CX Operations", "/services"], ["24/7 Support Operations", "/services"]] },
-  { h: "Work", links: [["Projects", "/projects"], ["Technology", "/technology"], ["How We Work", "/how-it-works"]] },
-  { h: "Company", links: [["About", "/about"], ["Why OptiFlowCX", "/why-optiflow"], ["Careers", "/careers"], ["Contact", "/contact"]] },
+  { h: "Services", links: [["Live Chat", "/services"], ["Phone Support", "/services"], ["Email Support", "/services"], ["Technical Support", "/services"], ["Shopify DTC Support", "/services"], ["VA Receptionist", "/services"], ["AI Automations", "/services"]] },
+  { h: "Company", links: [["Why OptiFlow", "/why-optiflow"], ["How It Works", "/how-it-works"], ["About", "/about"]] },
+  { h: "More", links: [["Careers", "/careers"], ["Contact", "/contact"]] },
 ];
 
 export default function Footer() {
@@ -19,9 +19,9 @@ export default function Footer() {
               <span className="relative h-10 w-10 flex-none overflow-hidden rounded-full ring-1 ring-white/10">
                 <Image src="/logo.png" alt="OptiFlow CX" fill sizes="40px" className="object-cover" />
               </span>
-              <span>OptiFlow<span className="font-normal text-faint">CX</span></span>
+              <span>OptiFlow<span className="font-normal text-faint"> CX</span></span>
             </Link>
-            <p className="mt-4 max-w-[280px] text-sm text-muted">Dedicated teams, structured processes and the technology behind exceptional customer experiences. {SITE.tagline}</p>
+            <p className="mt-4 max-w-[280px] text-sm text-muted">Global, high-volume customer support for ambitious brands. {SITE.tagline}</p>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
                 <a href={`mailto:${SITE.email}`} className="inline-flex items-center gap-2 text-muted transition hover:text-white">

@@ -101,7 +101,7 @@ export default function Services() {
   return (
     <section id="services" className="on-light relative z-[2] py-28">
       <div className="shell">
-        <SectionHead kicker="What we build" title={<>More than support. <span className="grad-text">The operation behind it.</span></>} sub="Six capabilities OptiFlowCX has designed, deployed and operated for real brands — from a first dedicated resource to a fully managed 24/7 CX operation." />
+        <SectionHead kicker="What we do" title={<>Support that feels like <span className="grad-text">your own team</span></>} sub="Every channel your customers choose reaches a trained agent who represents your brand — with the processes, tools and accountability to resolve issues properly." />
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 lg:[&>*:nth-child(7)]:col-start-2">
           {SERVICES.map((s, i) => <Card key={s.title} s={s} i={i} />)}
         </div>

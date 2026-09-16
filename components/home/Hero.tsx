@@ -41,21 +41,21 @@ export default function Hero() {
 
       <div className="relative z-[3] shell px-6 py-32">
         <motion.span variants={rise} initial="hidden" animate="show" custom={0} className="eyebrow justify-center">
-          OptiFlowCX — Customer Experience Operations
+          The Operations Engine for global CX
         </motion.span>
 
         <h1 className="hero-title mx-auto mt-7 max-w-[16ch] font-display font-extrabold leading-[0.98] tracking-[-0.015em] text-[clamp(48px,8.4vw,108px)]">
-          <motion.span variants={rise} initial="hidden" animate="show" custom={1} className="block">Customer experience,</motion.span>
-          <motion.span variants={rise} initial="hidden" animate="show" custom={2} className="block grad-text">optimized.</motion.span>
+          <motion.span variants={rise} initial="hidden" animate="show" custom={1} className="block">Customer support,</motion.span>
+          <motion.span variants={rise} initial="hidden" animate="show" custom={2} className="block grad-text">optimized for growth.</motion.span>
         </h1>
 
         <motion.p variants={rise} initial="hidden" animate="show" custom={3} className="mx-auto mt-7 max-w-2xl text-[clamp(15px,1.7vw,19px)] leading-relaxed text-muted">
-          OptiFlowCX helps growing brands build, manage, and scale customer support through dedicated teams, structured processes, and the technology behind them.
+          OptiFlow gives growing brands the people, processes and technology to run customer support without the operational overhead of building everything in-house.
         </motion.p>
 
         <motion.div variants={rise} initial="hidden" animate="show" custom={4} className="mt-10 flex flex-wrap justify-center gap-4">
-          <MagneticButton href="/contact">Let's build your CX →</MagneticButton>
-          <MagneticButton href="/projects" variant="ghost">Explore our work</MagneticButton>
+          <MagneticButton href="/contact">Book a free consultation</MagneticButton>
+          <MagneticButton href="/services" variant="ghost">Explore our services</MagneticButton>
         </motion.div>
       </div>
 
