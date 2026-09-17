@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>OptiFlowCX — Customer Experience Operations Portfolio</title>
-<meta name="description" content="OptiFlowCX builds and scales customer experience teams for growing brands — dedicated resources, structured operations, 24/7 support and AI-assisted workflows.">
+<meta name="description" content="OptiFlowCX builds and scales customer experience teams for growing brands — dedicated resources, structured operations, 24/7 support, AI voice receptionists and AI-assisted workflows.">
 <link rel="icon" href="/logo.png">
 <link rel="canonical" href="https://optiflowcx.com/portfolio">
 
@@ -11,12 +11,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="OptiFlowCX">
 <meta property="og:title" content="OptiFlowCX — Customer Experience Operations Portfolio">
-<meta property="og:description" content="OptiFlowCX builds and scales customer experience teams for growing brands — dedicated resources, structured operations, 24/7 support and AI-assisted workflows.">
+<meta property="og:description" content="OptiFlowCX builds and scales customer experience teams for growing brands — dedicated resources, structured operations, 24/7 support, AI voice receptionists and AI-assisted workflows.">
 <meta property="og:url" content="https://optiflowcx.com/portfolio">
 <meta property="og:image" content="https://optiflowcx.com/logo.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OptiFlowCX — Customer Experience Operations Portfolio">
-<meta name="twitter:description" content="OptiFlowCX builds and scales customer experience teams for growing brands — dedicated resources, structured operations, 24/7 support and AI-assisted workflows.">
+<meta name="twitter:description" content="OptiFlowCX builds and scales customer experience teams for growing brands — dedicated resources, structured operations, 24/7 support, AI voice receptionists and AI-assisted workflows.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -141,7 +141,7 @@ a  { color: inherit; text-decoration: none; }
 .brand { display: flex; align-items: center; gap: 11px; font-family: var(--f-display); font-size: 20px; letter-spacing: -0.02em; }
 .brand img { width: 30px; height: 30px; border-radius: 50%; }
 .brand i { font-style: normal; color: var(--slate-2); }
-.nav-links { display: flex; align-items: center; gap: 30px; list-style: none; padding: 0; margin: 0; }
+.nav-links { display: flex; align-items: center; gap: 24px; list-style: none; padding: 0; margin: 0; }
 .nav-links a { position: relative; color: var(--slate); font-size: var(--t-body-sm); font-weight: 600; padding-bottom: 4px; transition: color .18s; }
 .nav-links a::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: var(--accent); transition: width .3s cubic-bezier(.16,1,.3,1); }
 .nav-links a:hover, .nav-links a.on { color: var(--navy); }
@@ -214,7 +214,52 @@ section.alt { background: var(--paper-2); }
 }
 .svc-card:hover .go { color: var(--accent); transform: translateX(3px); }
 
-/* ---------------- 03 INDUSTRIES ---------------- */
+/* ---------------- 03 AI SYSTEMS ---------------- */
+.ai-lead {
+  display: grid; grid-template-columns: minmax(0,1.12fr) minmax(0,.88fr); gap: 48px;
+  background: var(--paper-2); border: 1px solid var(--border); border-radius: 14px; padding: 44px;
+}
+.ai-lead h3 {
+  font-family: var(--f-display); font-weight: 400; font-size: clamp(28px,3vw,40px);
+  letter-spacing: -0.024em; line-height: 1.12; margin-top: 14px;
+}
+.ai-lead > div > p { margin-top: 16px; font-size: var(--t-body-lg); max-width: 44ch; }
+.ai-verts { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px; }
+.ai-vert {
+  padding: 9px 16px; border-radius: 999px; background: #fff; border: 1px solid var(--border-2);
+  font-size: var(--t-body-sm); font-weight: 700; color: var(--navy);
+}
+.ai-caps ul { margin: 14px 0 0; padding: 0; list-style: none; }
+.ai-caps li {
+  position: relative; padding: 11px 0 11px 22px; border-bottom: 1px solid var(--border);
+  font-size: var(--t-body-sm); font-weight: 600; color: var(--navy); line-height: 1.5;
+}
+.ai-caps li:last-child { border-bottom: none; }
+.ai-caps li::before {
+  content: ""; position: absolute; left: 0; top: 18px;
+  width: 7px; height: 7px; border-radius: 50%; background: var(--accent);
+}
+.ai-row { margin-top: var(--gutter); display: grid; grid-template-columns: repeat(2,1fr); gap: var(--gutter); }
+.ai-card {
+  background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 30px;
+  box-shadow: 0 2px 10px -4px rgba(16,42,67,.07);
+  transition: box-shadow .28s, border-color .28s, transform .28s;
+}
+.ai-card:hover { box-shadow: 0 18px 44px -22px rgba(16,42,67,.30); border-color: var(--border-2); transform: translateY(-3px); }
+.ai-card h3 { margin-top: 16px; }
+.ai-card > p { margin-top: 12px; font-size: var(--t-body-sm); }
+.ai-card ul { margin: 18px 0 0; padding: 0; list-style: none; }
+.ai-card li {
+  position: relative; padding-left: 18px;
+  font-size: var(--t-body-sm); color: var(--slate); line-height: 1.9;
+}
+.ai-card li::before {
+  content: ""; position: absolute; left: 0; top: 12px;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--border-2);
+}
+.ai-note { margin-top: 30px; font-size: var(--t-meta); color: var(--slate-2); line-height: 1.6; max-width: 78ch; }
+
+/* ---------------- 04 INDUSTRIES ---------------- */
 .industry { padding-block: 96px; border-top: 1px solid var(--border); }
 #industries .sec-head { margin-bottom: 34px; }
 .industry:first-of-type { padding-top: 74px; }
@@ -280,6 +325,7 @@ section.alt .jr-step::before { background: var(--paper-2); }
   margin-top: 48px; padding: 44px; border-radius: 14px;
   background: var(--paper-2); border: 1px solid var(--border);
 }
+section.alt .complexity { background: #fff; }
 .complexity h3 { font-family: var(--f-display); font-weight: 400; font-size: clamp(28px, 3vw, 40px); letter-spacing: -0.024em; line-height: 1.12; max-width: 16ch; }
 .complexity .sub { margin-top: 12px; font-size: var(--t-body-lg); max-width: 48ch; }
 .cx-grid { margin-top: 32px; display: grid; grid-template-columns: repeat(4,1fr); gap: var(--gutter); }
@@ -300,8 +346,9 @@ section.alt .jr-step::before { background: var(--paper-2); }
 .ap-item { position: relative; }
 .ap-item::before {
   content: ""; position: absolute; left: 0; top: -29px; width: 13px; height: 13px; border-radius: 50%;
-  background: var(--paper-2); border: 2px solid var(--border-2); transition: background .35s, border-color .35s;
+  background: var(--paper); border: 2px solid var(--border-2); transition: background .35s, border-color .35s;
 }
+section.alt .ap-item::before { background: var(--paper-2); }
 .ap-item.on::before { background: var(--accent); border-color: var(--accent); }
 .ap-item .n { font-size: var(--t-label); font-weight: 700; letter-spacing: .16em; color: var(--accent); }
 .ap-item h4 { margin-top: 10px; }
@@ -333,6 +380,7 @@ section.alt .jr-step::before { background: var(--paper-2); }
   padding: 30px 26px; font-family: var(--f-body); font-size: var(--t-card-h); font-weight: 700;
   letter-spacing: -0.012em; color: var(--navy); transition: border-color .25s, color .25s, box-shadow .25s;
 }
+section:not(.alt) .tech-item { background: var(--paper-2); }
 .tech-item span { display: block; margin-top: 8px; font-size: var(--t-label); font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--slate-2); }
 .tech-item:hover { color: var(--accent); border-color: var(--border-2); box-shadow: 0 14px 34px -20px rgba(16,42,67,.28); }
 .tech-more { margin-top: 30px; display: grid; grid-template-columns: 170px 1fr; gap: 30px; align-items: baseline; }
@@ -397,6 +445,8 @@ footer { padding: 34px var(--pad); border-top: 1px solid var(--border); }
   .about-top { grid-template-columns: 1fr; gap: 26px; }
   .pillars { grid-template-columns: repeat(2,1fr); gap: 30px; }
   .svc-grid { grid-template-columns: repeat(2,1fr); }
+  .ai-lead { grid-template-columns: 1fr; gap: 30px; padding: 32px; }
+  .ai-row { grid-template-columns: 1fr; }
   .industry { padding-block: 76px; }
   .ind-client { grid-template-columns: 1fr; gap: 32px; }
   .ind-client.flip .ind-visual, .ind-client .ind-visual { order: 1; }
@@ -446,6 +496,7 @@ footer { padding: 34px var(--pad); border-top: 1px solid var(--border); }
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#ai-systems">AI Systems</a></li>
       <li><a href="#industries">Industries</a></li>
       <li><a href="#approach">Approach</a></li>
       <li><a href="#results">Results</a></li>
@@ -576,10 +627,74 @@ footer { padding: 34px var(--pad); border-top: 1px solid var(--border); }
   </div>
 </section>
 
-<!-- ================= 03 INDUSTRIES — CENTREPIECE ================= -->
-<section id="industries" style="padding-bottom:0">
+<!-- ================= 03 AI SYSTEMS ================= -->
+<section id="ai-systems">
   <div class="wrap">
-    <span class="label rev"><b>03</b> &nbsp;/&nbsp; Industries</span>
+    <span class="label rev"><b>03</b> &nbsp;/&nbsp; AI Systems</span>
+    <div class="sec-head rev">
+      <h2>AI systems built on top of real operations.</h2>
+      <p>Alongside our customer experience teams, we design and deploy AI voice receptionists and automated workflows — built for appointment-led practices where a missed call is a missed patient.</p>
+    </div>
+
+    <div class="ai-lead rev">
+      <div>
+        <span class="label accent">Voice AI</span>
+        <h3>AI Voice Receptionist</h3>
+        <p>A front desk that answers every inbound call, books and reschedules appointments, and hands off to your team the moment a human is needed — so calls are never lost to voicemail, after-hours or overflow.</p>
+        <div class="ai-verts">
+          <div class="ai-vert">Med Spas</div>
+          <div class="ai-vert">Dental Clinics</div>
+          <div class="ai-vert">Aesthetic Clinics</div>
+        </div>
+      </div>
+      <div class="ai-caps">
+        <span class="label">What it handles</span>
+        <ul>
+          <li>Inbound call answering</li>
+          <li>Appointment booking &amp; rescheduling</li>
+          <li>Treatment &amp; pricing FAQs</li>
+          <li>New patient intake</li>
+          <li>After-hours &amp; overflow coverage</li>
+          <li>Routing &amp; escalation to staff</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ai-row stg">
+      <article class="ai-card">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M10 6.5h4.5a2 2 0 0 1 2 2V14"/><path d="M14.5 11.5 16.5 14l2-2.5"/></svg></div>
+        <h3>AI-Assisted Workflows &amp; Automation</h3>
+        <p>Automation layered on top of human teams — capturing leads, following up and keeping the pipeline moving without manual work.</p>
+        <ul>
+          <li>Lead capture into CRM</li>
+          <li>Appointment reminders &amp; no-show follow-ups</li>
+          <li>Review &amp; reactivation campaigns</li>
+          <li>Two-way SMS &amp; email sequences</li>
+          <li>Routing, macros &amp; integrations</li>
+        </ul>
+      </article>
+      <article class="ai-card">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/><circle cx="9" cy="7" r="2.1" fill="#fff"/><circle cx="15" cy="12" r="2.1" fill="#fff"/><circle cx="8" cy="17" r="2.1" fill="#fff"/></svg></div>
+        <h3>GoHighLevel (GHL) Expertise</h3>
+        <p>Hands-on build and operation inside GoHighLevel — from sub-account setup through to live campaigns and reporting.</p>
+        <ul>
+          <li>Sub-account setup &amp; configuration</li>
+          <li>Pipelines &amp; opportunity stages</li>
+          <li>Calendars &amp; booking flows</li>
+          <li>Workflows, triggers &amp; campaigns</li>
+          <li>Integrations &amp; reporting</li>
+        </ul>
+      </article>
+    </div>
+
+    <p class="ai-note">AI systems are deployed alongside trained human support — automation handles volume and routine, people handle judgement and escalation.</p>
+  </div>
+</section>
+
+<!-- ================= 04 INDUSTRIES — CENTREPIECE ================= -->
+<section id="industries" class="alt" style="padding-bottom:0">
+  <div class="wrap">
+    <span class="label rev"><b>04</b> &nbsp;/&nbsp; Industries</span>
     <div class="sec-head rev">
       <h2>Industries we understand.<br>Operations we've built.</h2>
       <p>Our experience spans e-commerce, consumer technology, logistics and hardware — with teams and workflows built around each business.</p>
@@ -878,9 +993,9 @@ footer { padding: 34px var(--pad); border-top: 1px solid var(--border); }
 </section>
 
 <!-- ================= 04 HOW WE OPERATE ================= -->
-<section id="approach" class="alt">
+<section id="approach">
   <div class="wrap">
-    <span class="label rev"><b>04</b> &nbsp;/&nbsp; How We Operate</span>
+    <span class="label rev"><b>05</b> &nbsp;/&nbsp; How We Operate</span>
     <div class="sec-head rev">
       <h2>We don't just add agents. We build the operation around them.</h2>
     </div>
@@ -895,9 +1010,9 @@ footer { padding: 34px var(--pad); border-top: 1px solid var(--border); }
 </section>
 
 <!-- ================= 05 RESULTS ================= -->
-<section id="results">
+<section id="results" class="alt">
   <div class="wrap">
-    <span class="label rev"><b>05</b> &nbsp;/&nbsp; Results</span>
+    <span class="label rev"><b>06</b> &nbsp;/&nbsp; Results</span>
     <div class="sec-head rev">
       <h2>The scale behind the work.</h2>
     </div>
@@ -929,9 +1044,9 @@ footer { padding: 34px var(--pad); border-top: 1px solid var(--border); }
 </section>
 
 <!-- ================= 06 TECHNOLOGY ================= -->
-<section id="technology" class="alt">
+<section id="technology">
   <div class="wrap">
-    <span class="label rev"><b>06</b> &nbsp;/&nbsp; Technology</span>
+    <span class="label rev"><b>07</b> &nbsp;/&nbsp; Technology</span>
     <div class="sec-head rev">
       <h2>Experience inside the platforms your customers already use.</h2>
     </div>
@@ -954,9 +1069,9 @@ footer { padding: 34px var(--pad); border-top: 1px solid var(--border); }
 </section>
 
 <!-- ================= 07 WHY ================= -->
-<section id="why">
+<section id="why" class="alt">
   <div class="wrap">
-    <span class="label rev"><b>07</b> &nbsp;/&nbsp; Why OptiFlowCX</span>
+    <span class="label rev"><b>08</b> &nbsp;/&nbsp; Why OptiFlowCX</span>
     <div class="sec-head rev">
       <h2>An extension of your team, not just another vendor.</h2>
     </div>
@@ -972,7 +1087,7 @@ footer { padding: 34px var(--pad); border-top: 1px solid var(--border); }
 <!-- ================= 08 CONTACT ================= -->
 <section class="cta" id="contact">
   <div class="wrap">
-    <span class="label rev"><b>08</b> &nbsp;/&nbsp; Contact</span>
+    <span class="label rev"><b>09</b> &nbsp;/&nbsp; Contact</span>
     <h2 class="rev">Ready to build a better customer experience?</h2>
     <p class="rev">Let's design the people, processes and operation behind it.</p>
     <div class="ctas rev">
@@ -993,6 +1108,7 @@ footer { padding: 34px var(--pad); border-top: 1px solid var(--border); }
     <ul class="foot-nav">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#ai-systems">AI Systems</a></li>
       <li><a href="#industries">Industries</a></li>
       <li><a href="#approach">Approach</a></li>
       <li><a href="#results">Results</a></li>
